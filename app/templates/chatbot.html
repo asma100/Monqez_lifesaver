@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="static/chatbot.css">
+    <link rel="icon" href="{{ url_for('static', filename='imags/icon.png') }}" type="image/x-icon">
+    <title>Chatbot - BME</title>
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburger-toggle">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <header class="site-header" id="sidebar">
+        <div class="navbar-nav">
+            <a class="nav-item" href="{{ url_for('home') }}">الرئيسية</a>
+            <a class="nav-item" href="{{ url_for('about') }}">عن الصفحة</a>
+            {% if current_user.is_authenticated %}
+              <a class="nav-item" href="{{ url_for('volunteer') }}">تطوع</a>
+                <a class="nav-item" href="{{ url_for('history') }}">سجل المحادثات</a>
+                <a class="nav-item" href="{{ url_for('logout') }}">تسجيل خروج</a>
+            {% else %}
+              <a class="nav-item" href="{{ url_for('login') }}">تسجيل الدخول</a>
+              <a class="nav-item" href="{{ url_for('register') }}">إنشاء حساب</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <div>
+        <img src="{{ url_for('static', filename='imags/hands.png') }}" alt="شعار" class="background-image">
+    </div>
+
+    <div class="wrapper">
+        <div class="box" id="chat-box"></div>
+        <div class="typing-area">
+            <form id="chat-form" class="input-field">
+                <input type="text" id="user-input" placeholder="Type your message here..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const chatForm = document.getElementById('chat-form');
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+    const hamburgerToggle = document.getElementById('hamburger-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const wrapper = document.querySelector('.wrapper');
+    const typingArea = document.querySelector('.typing-area');
+
+    // Typing indicator for bot
+    function createTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.classList.add('item', 'typing-indicator');
+        typingDiv.id = 'typing-indicator';
+        typingDiv.innerHTML = `
+            <div class="icon"><i class="fa fa-robot"></i></div>
+            <div class="msg">
+                <div class="typing-animation">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <p class="typing-text">المساعد يكتب...</p>
+            </div>
+        `;
+        return typingDiv;
+    }
+
+    function removeTypingIndicator() {
+        const indicator = document.getElementById('typing-indicator');
+        if (indicator) {
+            indicator.remove();
+        }
+    }
+
+    // Toggle sidebar on mobile
+    hamburgerToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        sidebar.classList.toggle('show');
+        wrapper.classList.toggle('expanded');
+        typingArea.classList.toggle('expanded');
+    });
+
+    // Hide sidebar if clicked outside on small screens
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && !sidebar.contains(e.target) && !hamburgerToggle.contains(e.target)) {
+            sidebar.classList.remove('show');
+        }
+    });
+
+    // Chat form submission
+    chatForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const query = userInput.value.trim();
+        if (!query) return;
+
+        // Show user message
+        const userMessage = document.createElement('div');
+        userMessage.classList.add('item', 'right');
+        userMessage.innerHTML = `<div class="msg"><p>${query}</p></div>`;
+        chatBox.appendChild(userMessage);
+
+        userInput.value = '';
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        // Show typing indicator
+        const typingIndicator = createTypingIndicator();
+        chatBox.appendChild(typingIndicator);
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        // Disable input while waiting
+        userInput.disabled = true;
+        const submitBtn = chatForm.querySelector('button');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'جاري الإرسال...';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch('/get_response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query: query })
+            });
+
+            const data = await response.json();
+            const answer = data.response;
+
+            removeTypingIndicator();
+
+            // Show bot message directly with Markdown formatting
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('item');
+            botMessage.innerHTML = `
+                <div class="icon"><i class="fa fa-user-md"></i></div>
+                <div class="msg">${marked.parse(answer)}</div>
+            `;
+            chatBox.appendChild(botMessage);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+        } catch (error) {
+            console.error('Error fetching response:', error);
+            removeTypingIndicator();
+
+            const errorMessage = document.createElement('div');
+            errorMessage.classList.add('item', 'error');
+            errorMessage.innerHTML = `
+                <div class="icon"><i class="fa fa-exclamation-triangle"></i></div>
+                <div class="msg"><p>عذراً، حدث خطأ. يرجى المحاولة مرة أخرى.</p></div>
+            `;
+            chatBox.appendChild(errorMessage);
+        } finally {
+            userInput.disabled = false;
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            userInput.focus();
+        }
+    });
+});
+</script>
+
+</body>
+</html>

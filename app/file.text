@@ -1,0 +1,108 @@
+first aid assistants smart chatbot/
+├─ app/
+│  ├─ __pycache__/
+│  │  ├─ __init__.cpython-312.pyc
+│  │  ├─ config.cpython-312.pyc
+│  │  ├─ forms.cpython-312.pyc
+│  │  ├─ gemini_optimized.cpython-312.pyc
+│  │  ├─ gemini.cpython-312.pyc
+│  │  ├─ loction.cpython-312.pyc
+│  │  ├─ models.cpython-312.pyc
+│  │  └─ routes.cpython-312.pyc
+│  ├─ pdfs/
+│  │  ├─ first_aid_notes_2019.pdf
+│  │  └─ First-Aid.pdf
+│  ├─ static/
+│  │  ├─ imags/
+│  │  │  ├─ abcd.png
+│  │  │  ├─ anesthesia_machine.jpg
+│  │  │  ├─ bg.png
+│  │  │  ├─ bgimage.png
+│  │  │  ├─ chemistry_analyzer.jpg
+│  │  │  ├─ ct.jpg
+│  │  │  ├─ electrosurgical_unit.jpg
+│  │  │  ├─ face.jpg
+│  │  │  ├─ hands.png
+│  │  │  ├─ hematology_analyzer.jpg
+│  │  │  ├─ icu.jpg
+│  │  │  ├─ imaging.jpg
+│  │  │  ├─ infusion_pump.jpg
+│  │  │  ├─ laboratory.jpg
+│  │  │  ├─ log.png
+│  │  │  ├─ login.png
+│  │  │  ├─ logo.png
+│  │  │  ├─ monitor.jpg
+│  │  │  ├─ mri.jpg
+│  │  │  ├─ pcr_machine.jpg
+│  │  │  ├─ signin.png
+│  │  │  ├─ surgical_lights.jpg
+│  │  │  ├─ surgical.jpg
+│  │  │  ├─ ventilator.jpg
+│  │  │  └─ xray.jpg
+│  │  ├─ js/
+│  │  ├─ about.css
+│  │  ├─ chatbot.css
+│  │  ├─ landingpage.css
+│  │  ├─ login.css
+│  │  ├─ register.css
+│  │  └─ shared.css
+│  ├─ templates/
+│  │  ├─ about.html
+│  │  ├─ chatbot.html
+│  │  ├─ home.html
+│  │  ├─ landingpage.html
+│  │  ├─ login.html
+│  │  └─ register.html
+│  ├─ __init__.py
+│  ├─ config.py
+│  ├─ forms.py
+│  ├─ gemini_optimized.py
+│  ├─ gemini.py
+│  ├─ loction.py
+│  ├─ models.py
+│  ├─ Procfile
+│  ├─ routes.py
+│  └─ site.db
+├─ data/
+│  ├─ hotosm_sdn_health_facilities_points_shp/
+│  │  ├─ hotosm_sdn_health_facilities_points_shp.cpg
+│  │  ├─ hotosm_sdn_health_facilities_points_shp.dbf
+│  │  ├─ hotosm_sdn_health_facilities_points_shp.prj
+│  │  ├─ hotosm_sdn_health_facilities_points_shp.shp
+│  │  ├─ hotosm_sdn_health_facilities_points_shp.shx
+│  │  └─ Readme.txt
+│  └─ hotosm_sdn_health_facilities_polygons_shp/
+│     ├─ hotosm_sdn_health_facilities_polygons_shp.cpg
+│     ├─ hotosm_sdn_health_facilities_polygons_shp.dbf
+│     ├─ hotosm_sdn_health_facilities_polygons_shp.prj
+│     ├─ hotosm_sdn_health_facilities_polygons_shp.shp
+│     ├─ hotosm_sdn_health_facilities_polygons_shp.shx
+│     └─ Readme.txt
+├─ migrations/
+│  ├─ __pycache__/
+│  │  └─ env.cpython-312.pyc
+│  ├─ versions/
+│  │  ├─ __pycache__/
+│  │  │  └─ 2a2f61eedc62_initial_migration.cpython-312.pyc
+│  │  └─ 2a2f61eedc62_initial_migration.py
+│  ├─ alembic.ini
+│  ├─ env.py
+│  ├─ README
+│  └─ script.py.mako
+├─ test/
+│  ├─ Include ...
+├─ venv/
+│  ├─ ...
+├─ conv.py
+├─ converttojson.py
+├─ data.json
+├─ fast_start.py
+├─ Readme.txt
+├─ requirements_optimized.txt
+├─ requirements.txt
+├─ run.py
+├─ setup_embeddings.py
+├─ sudan_hospitals_data.json
+├─ sudan_hospitals.geojson
+├─ sudan_hospitals.json
+└─ testt.py

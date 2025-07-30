@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سجل المحادثات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='history.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imags/icon.png') }}" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-nav" id="navbarNav">
+                <a class="nav-item" href="{{ url_for('home') }}">الرئيسية</a>
+                <a class="nav-item" href="{{ url_for('chat') }}">محادثة جديدة</a>
+                <a class="nav-item" href="{{ url_for('about') }}">عن الصفحة</a>
+                {% if current_user.is_authenticated %}
+                    <a class="nav-item" href="{{ url_for('volunteer') }}">تطوع</a>
+                    <a class="nav-item" href="{{ url_for('history') }}">سجل المحادثات</a>
+                    <a class="nav-item" href="{{ url_for('logout') }}">تسجيل خروج</a>
+                {% else %}
+                    <a class="nav-item" href="{{ url_for('login') }}">تسجيل دخول</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+
+ <div class="history-header">
+    <h1>سجل المحادثات</h1>
+</div>
+
+<div class="history-container">
+    {% for chat in chats %}
+    <div class="chat-entry">
+        <button class="collapse-toggle">
+            محادثة بتاريخ {{ chat.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
+        </button>
+        <div class="chat-content">
+            <p>{{ chat.content.replace('\n', '<br>') | safe }}</p>
+            <form action="{{ url_for('delete_chat', chat_id=chat.id) }}" method="post">
+                <button class="delete-button" type="submit">🗑 حذف</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navbarNav = document.getElementById("navbarNav");
+
+    hamburger.addEventListener("click", () => {
+      navbarNav.classList.toggle("show");
+      hamburger.classList.toggle("active");
+    });
+
+    // Optional: Close nav when a link is clicked
+    const navItems = document.querySelectorAll(".nav-item");
+    navItems.forEach(item => {
+      item.addEventListener("click", () => {
+        navbarNav.classList.remove("show");
+        hamburger.classList.remove("active");
+      });
+    });
+
+    // Optional: Close nav if user clicks outside
+    document.addEventListener("click", (e) => {
+      if (!navbarNav.contains(e.target) && !hamburger.contains(e.target)) {
+        navbarNav.classList.remove("show");
+        hamburger.classList.remove("active");
+      }
+    });
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.collapse-toggle');
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            content.classList.toggle('collapsed');
+        });
+    });
+});
+</script>
+
+</body>
+</html>

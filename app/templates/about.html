@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن مساعد الإسعافات الأولية</title>
+    <link rel="stylesheet" href="static/about.css">
+    <link rel="icon" href="{{ url_for('static', filename='imags/icon.png') }}" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-nav" id="navbarNav">
+                <a class="nav-item" href="{{ url_for('home') }}">الرئيسية</a>
+                <a class="nav-item" href="{{ url_for('chat') }}">محادثة جديدة</a>
+                <a class="nav-item" href="{{ url_for('about') }}">عن الصفحة</a>
+                {% if current_user.is_authenticated %}
+                    <a class="nav-item" href="{{ url_for('volunteer') }}">تطوع</a>
+                    <a class="nav-item" href="{{ url_for('history') }}">سجل المحادثات</a>
+                    <a class="nav-item" href="{{ url_for('logout') }}">تسجيل خروج</a>
+                {% else %}
+                    <a class="nav-item" href="{{ url_for('login') }}">تسجيل دخول</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1 class="theheader">عن مساعد الإسعافات الأولية السوداني</h1>
+    
+        <section class="p">
+            <p>
+                "مساعد الإسعافات الأولية السوداني" هو روبوت ذكي مدعوم بالذكاء الاصطناعي، تم تطويره خصيصًا لتقديم إرشادات إسعافية موثوقة وسريعة باللغة العربية السودانية. يهدف المشروع إلى سد الفجوة في الوصول إلى المعلومات الطبية الأولية في السودان، من خلال واجهة سهلة الاستخدام وخدمات مخصصة تعتمد على موقع المستخدم.
+            </p>
+            <p>
+                سواء كنت في المنزل أو الشارع أو مكان العمل، يزوّدك هذا المساعد بخطوات واضحة للتعامل مع الحالات الطبية الطارئة، ويقترح عليك أقرب المراكز الطبية المتاحة، كل ذلك في ثوانٍ معدودة.
+            </p>
+            <h2>أهداف المشروع:</h2>
+            <ul>
+                <li>تقديم إرشادات إسعاف أولي دقيقة وسهلة الفهم.</li>
+                <li>دعم اللغة المحلية لجعل المعلومة الطبية أقرب للجميع.</li>
+                <li>اقتراح مراكز صحية قريبة حسب موقع المستخدم.</li>
+                <li>تمكين الأفراد من التصرف الصحيح في اللحظات الحرجة.</li>
+            </ul>
+        </section>
+    </main>
+    
+    
+    <footer>
+        <p>&copy; 2025 مساعد الإسعافات الأولية السوداني</p>
+    </footer>
+   <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navbarNav = document.getElementById("navbarNav");
+
+    hamburger.addEventListener("click", () => {
+      navbarNav.classList.toggle("show");
+      hamburger.classList.toggle("active");
+    });
+
+    // Optional: Close nav when a link is clicked
+    const navItems = document.querySelectorAll(".nav-item");
+    navItems.forEach(item => {
+      item.addEventListener("click", () => {
+        navbarNav.classList.remove("show");
+        hamburger.classList.remove("active");
+      });
+    });
+
+    // Optional: Close nav if user clicks outside
+    document.addEventListener("click", (e) => {
+      if (!navbarNav.contains(e.target) && !hamburger.contains(e.target)) {
+        navbarNav.classList.remove("show");
+        hamburger.classList.remove("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

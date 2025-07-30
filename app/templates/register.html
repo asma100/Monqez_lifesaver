@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="static/register.css">
+    <link rel="icon" href="{{ url_for('static', filename='imags/icon.png') }}" type="image/x-icon">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <!-- Navbar Left Side -->
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{{ url_for('home') }}">الرئيسية</a>
+                <a class="nav-item nav-link" href="{{ url_for('about') }}">عن الصفحة </a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+                {% if current_user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{{ url_for('logout') }}">تسجيل خروج</a>
+                {% else %}
+                    <a class="nav-item nav-link" href="{{ url_for('login') }}">تسجيل دخول</a>
+                    <a class="nav-item nav-link" href="{{ url_for('register') }}">إنشاء حساب</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+      
+   
+        
+    <div class="container1">
+    <h1>Register</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.username.label(class="form-control-label") }}
+            {{ form.username(class="form-control") }}
+        </div>
+        <div>
+            {{ form.email.label(class="form-control-label") }}
+            {{ form.email(class="form-control") }}
+        </div>
+        <div>
+            {{ form.password.label(class="form-control-label") }}
+            {{ form.password(class="form-control") }}
+        </div>
+        <div>
+            {{ form.confirm_password.label(class="form-control-label") }}
+            {{ form.confirm_password(class="form-control") }}
+        </div>
+        <button type="submit">{{ form.submit.label }}</button>
+    </form>
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a>.</p>
+</div>
+</div>
+</body>
+</html>

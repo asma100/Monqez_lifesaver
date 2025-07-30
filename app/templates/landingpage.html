@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='landingpage.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imags/icon.png') }}" type="image/x-icon">
+    <style>
+
+    </style>
+</head>
+<body>
+  
+
+    <!-- Navigation -->
+    <header class="site-header">
+  <nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navbar-nav" id="navbarNav">
+      {% if current_user.is_authenticated %}
+          <a class="nav-item" href="{{ url_for('logout') }}">تسجيل خروج</a> 
+          <a class="nav-item" href="{{ url_for('volunteer') }}">تطوع</a>
+          <a class="nav-item" href="{{ url_for('history') }}">سجل المحادثات</a>
+      {% else %}
+          <a class="nav-item" href="{{ url_for('login') }}">تسجيل دخول</a>
+      {% endif %}
+      <a class="nav-item" href="{{ url_for('chat') }}">محادثة جديدة</a>
+      <a class="nav-item" href="{{ url_for('about') }}">عن الصفحة</a>
+      <a class="nav-item" href="{{ url_for('home') }}">الرئيسية</a>
+    </div>
+  </nav>
+</header>
+
+    <!-- Logo and Title -->
+    <div class="logo-title-container">
+      
+        <div class="title-text">
+            
+            <!-- Introduction -->
+    <section class="intro">
+        <div class="intro-text">
+        <h1>منقذ</h1>
+        <h2>دليلك الأول للإسعافات الأولية في السودان </h2>
+        <h2>لأن كل ثانية تهم</h2>
+        </div>
+      
+        <p>
+            مرحباً بك في <strong>“منقذ”</strong> — روبوت دردشة ذكي مدعوم بالذكاء الاصطناعي،
+            مصمم لتقديم إرشادات واضحة وموثوقة لإنقاذ الحياة في حالات الطوارئ الطبية.
+        </p>
+        <p>
+            سواء كنت تواجه حالة طبية طارئة أو تساعد شخصاً آخر، يقدّم هذا المساعد خطوات دقيقة للتصرّف،
+            بالإضافة إلى توصيات بمراكز طبية قريبة بناءً على موقعك.
+        </p>
+    </section>
+     <div  class = "location-container" >
+        <h2>محادثة جديدة</h2>
+        <button id="locationBtn" class="location-button" onclick="getLocation()">بدء محادثة</button>
+    </div>
+        </div>
+
+        <div class="logo-wrapper">
+            <img src="{{ url_for('static', filename='imags/logo.png') }}" alt="شعار" class="logo">
+        </div>
+        
+    </div>
+
+     
+     <div class="background-image-container">
+        <img src="static/imags/face.jpg" alt="Background Image" class="background-image2">
+    </div>
+   
+
+    <!-- 📍 Location Sharing -->
+   
+
+    <form id="locationForm" method="POST" action="/set_location">
+        <input type="hidden" name="lat" id="lat">
+        <input type="hidden" name="lon" id="lon">
+    </form>
+   
+
+    
+
+    <!-- Footer -->
+   
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navbarNav = document.getElementById("navbarNav");
+
+    hamburger.addEventListener("click", () => {
+      navbarNav.classList.toggle("show");
+    });
+  });
+</script>
+
+    <!-- Location JS -->
+    <script>
+        // Set background container height to cover full document
+        function adjustBackgroundHeight() {
+            const backgroundContainer = document.querySelector('.background-container');
+            const documentHeight = Math.max(
+                document.body.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.clientHeight,
+                document.documentElement.scrollHeight,
+                document.documentElement.offsetHeight
+            );
+            backgroundContainer.style.height = documentHeight + 'px';
+        }
+
+        // Call on page load and resize
+        document.addEventListener('DOMContentLoaded', adjustBackgroundHeight);
+        window.addEventListener('resize', adjustBackgroundHeight);
+
+        function getLocation() {
+            const button = document.getElementById('locationBtn');
+            button.innerHTML = '🔄 جاري الحصول على الموقع...';
+            button.disabled = true;
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(success, error, {
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    maximumAge: 60000
+                });
+            } else {
+                alert("هذا المتصفح لا يدعم تحديد الموقع.");
+                resetButton();
+            }
+        }
+
+        function success(position) {
+            document.getElementById("lat").value = position.coords.latitude;
+            document.getElementById("lon").value = position.coords.longitude;
+            document.getElementById("locationBtn").innerHTML = '✅ تم تحديد الموقع!';
+            document.getElementById("locationForm").submit();
+        }
+
+        function error(err) {
+            let msg = "تعذر الحصول على الموقع. ";
+            switch (err.code) {
+                case err.PERMISSION_DENIED: msg += "يرجى السماح بالوصول إلى الموقع."; break;
+                case err.POSITION_UNAVAILABLE: msg += "الموقع غير متاح."; break;
+                case err.TIMEOUT: msg += "انتهى وقت الطلب."; break;
+                default: msg += "حدث خطأ غير معروف."; break;
+            }
+            alert(msg);
+            resetButton();
+        }
+
+        function resetButton() {
+            const button = document.getElementById('locationBtn');
+            button.innerHTML = '📍 شارك موقعي الجغرافي';
+            button.disabled = false;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('locationBtn');
+            if (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    getLocation();
+                });
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* =========================
+   SHARED STYLES FOR ALL PAGES
+   First Aid Assistant Theme
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body Styles */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-image: url('imags/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    min-height: 100vh;
+    color: #fff;
+    direction: rtl;
+}
+
+/* Container for centered content */
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Card-style containers */
+.content-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 71, 87, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 71, 87, 0.3);
+    border-radius: 15px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    text-align: right;
+}
+
+.form-control:focus {
+    border-color: #ff4757;
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.3);
+    outline: none;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff4757, #ff3838);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #ff3838, #ff2826);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #4834d4, #686de0);
+    color: white;
+    box-shadow: 0 4px 15px rgba(72, 52, 212, 0.3);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #3742fa, #5352ed);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 52, 212, 0.4);
+}
+
+.btn-block {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Page Titles */
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.text-link {
+    color: #ff4757;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: #ff3838;
+    text-decoration: underline;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.alert-success {
+    background: rgba(46, 204, 113, 0.9);
+    color: white;
+    border: 2px solid #2ecc71;
+}
+
+.alert-danger {
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+    border: 2px solid #e74c3c;
+}
+
+.alert-info {
+    background: rgba(52, 152, 219, 0.9);
+    color: white;
+    border: 2px solid #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Navigation Back Link */
+.nav-back {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #ff4757;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-back:hover {
+    background: #ff4757;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 71, 87, 0.3);
+}

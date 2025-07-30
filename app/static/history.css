@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+
+body, html {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f5fa;
+    direction: rtl;
+}
+
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar Styles */
+.site-header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 1rem;
+    
+}
+
+.site-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-header .navbar-nav {
+   
+    gap: 1rem;
+}
+
+.nav-item {
+    color: rgb(0, 0, 0);
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+   
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav-item:hover::before {
+    left: 100%;
+}
+
+.nav-item:hover {
+    background: linear-gradient(135deg, #fa3737, #ed5252);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 52, 212, 0.4);
+    color: white;
+}
+/* Page Header */
+.history-header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    margin-top: 4rem;
+}
+
+.history-header h1 {
+    font-size: 2.8rem;
+    color: #ff4d4d;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+/* History Container */
+.history-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 2rem 5rem;
+}
+
+/* Each Chat Item */
+.chat-entry {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1.5px solid rgba(255, 71, 87, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.chat-entry:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chat-entry .timestamp {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* Delete Button */
+.delete-button {
+    background: linear-gradient(135deg, #ff6b6b, #d63031);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Collapse Button */
+.collapse-toggle {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    text-align: right;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 0.5rem;
+}
+
+.collapse-toggle:hover {
+    background-color: #e84141;
+}
+
+/* Hidden by default */
+.chat-content.collapsed {
+    display: none;
+}
+
+.chat-content {
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 200;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #ff3838;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Hide navbar items on small screens */
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 1rem;
+    z-index: 150;
+  }
+
+  .navbar-nav.show {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    color: #000;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .site-header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+}
+
+    .history-header h1 {
+        font-size: 2rem;
+    }
+
+    .chat-entry {
+        padding: 1rem;
+    }
+}

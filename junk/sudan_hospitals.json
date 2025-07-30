@@ -1,0 +1,2621 @@
+[
+  {
+    "name": "مستشفى مكة لطب العيون",
+    "type": "hospital",
+    "latitude": 15.665180420540823,
+    "longitude": 32.48689946409511,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى تبارك للاطفال",
+    "type": "hospital",
+    "latitude": 15.661439030842592,
+    "longitude": 32.48623180116779,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي شمبات",
+    "type": "hospital",
+    "latitude": 15.65291861752035,
+    "longitude": 32.52517586031215,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي الصبابي",
+    "type": "hospital",
+    "latitude": 15.63496936612756,
+    "longitude": 32.516617725230546,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المستشفى السعودى",
+    "type": "hospital",
+    "latitude": 15.47690347004809,
+    "longitude": 36.395281224996225,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى كسلا التعليمى",
+    "type": "hospital",
+    "latitude": 15.455103513900081,
+    "longitude": 36.39480543457245,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى المناقل",
+    "type": "hospital",
+    "latitude": 14.25232383905053,
+    "longitude": 32.998074309357186,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "الهلال الاحمر",
+    "type": "hospital",
+    "latitude": 14.258964227712278,
+    "longitude": 32.986233681235746,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى المنيرة",
+    "type": "hospital",
+    "latitude": 15.598623000000002,
+    "longitude": 32.529402149999996,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى ابن الهيثم",
+    "type": "hospital",
+    "latitude": 15.598709549999997,
+    "longitude": 32.530144199999995,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الراجحي",
+    "type": "hospital",
+    "latitude": 15.648806435343293,
+    "longitude": 32.369221131787825,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "talatashara issa eljag HC",
+    "type": "hospital",
+    "latitude": 16.04299822774924,
+    "longitude": 36.12671448572414,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "umalgura HC",
+    "type": "hospital",
+    "latitude": 16.14045413240551,
+    "longitude": 36.202227469366726,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 15.616549215072563,
+    "longitude": 32.48469602691489,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 9.584241164221122,
+    "longitude": 28.459671528971942,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى يستبشرون",
+    "type": "hospital",
+    "latitude": 15.682975097351513,
+    "longitude": 32.49983591658044,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي العمران",
+    "type": "hospital",
+    "latitude": 15.69677885059884,
+    "longitude": 32.50482413294074,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الشفاء التخصصي",
+    "type": "hospital",
+    "latitude": 15.453500723206242,
+    "longitude": 32.50524513798556,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز الحكمة الصحي",
+    "type": "hospital",
+    "latitude": 15.465786300000001,
+    "longitude": 32.5032002,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الشريف",
+    "type": "hospital",
+    "latitude": 15.599352272353874,
+    "longitude": 32.53408598963492,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز الشجرة الصحي",
+    "type": "hospital",
+    "latitude": 15.542901015902865,
+    "longitude": 32.497243807719954,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز النيلين للتشخيص الطبي",
+    "type": "hospital",
+    "latitude": 15.601869087758903,
+    "longitude": 32.530004046074296,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستوصف البلسم",
+    "type": "hospital",
+    "latitude": 15.59945876331704,
+    "longitude": 32.533208538228116,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز المعلم الصحي",
+    "type": "hospital",
+    "latitude": 15.582983754211915,
+    "longitude": 32.52854337144198,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز اسباين كير لتقويم العمود الفقري",
+    "type": "hospital",
+    "latitude": 15.592185577733204,
+    "longitude": 32.53678650671154,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مجمع العنود الطبي",
+    "type": "hospital",
+    "latitude": 15.467822551063684,
+    "longitude": 32.50251429348531,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "عيادات نوباتيا;مجمع طبي نوباتيا",
+    "type": "hospital",
+    "latitude": 15.479758341841796,
+    "longitude": 32.48271238633406,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى دلمون الخاص",
+    "type": "hospital",
+    "latitude": 15.523415300000002,
+    "longitude": 32.50399995000001,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مكة للعيون - الكلاكلة",
+    "type": "hospital",
+    "latitude": 15.481182839236828,
+    "longitude": 32.48273077228718,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المستشفى التركي",
+    "type": "hospital",
+    "latitude": 15.462339796191582,
+    "longitude": 32.475941020126534,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستوصف كافوري شرق",
+    "type": "hospital",
+    "latitude": 15.65548358640208,
+    "longitude": 32.613496568236705,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى عبادة عبد الله",
+    "type": "hospital",
+    "latitude": 15.63862195,
+    "longitude": 32.60743074999999,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى البراحة",
+    "type": "hospital",
+    "latitude": 15.673149937151472,
+    "longitude": 32.54375023905758,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الدروشاب التخصصي للولادة",
+    "type": "hospital",
+    "latitude": 15.713818714537275,
+    "longitude": 32.5788739250248,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى طب المناطق الحارة",
+    "type": "hospital",
+    "latitude": 15.640345117148607,
+    "longitude": 32.49359728397297,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى أم درمان للولادة",
+    "type": "hospital",
+    "latitude": 15.635899119279753,
+    "longitude": 32.48926856376481,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الانفال",
+    "type": "hospital",
+    "latitude": 15.664958849999998,
+    "longitude": 32.4565869,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى البقعة",
+    "type": "hospital",
+    "latitude": 15.643392568326083,
+    "longitude": 32.48797970390596,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى السلاح الطبي",
+    "type": "hospital",
+    "latitude": 15.615317457897829,
+    "longitude": 32.48480180171271,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستوصف دكتور نورين",
+    "type": "hospital",
+    "latitude": 15.620767830505953,
+    "longitude": 32.46698863919427,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الراهبات للولادة",
+    "type": "hospital",
+    "latitude": 15.600141471862518,
+    "longitude": 32.5216663878026,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي البشري",
+    "type": "hospital",
+    "latitude": 15.5117976,
+    "longitude": 32.5791126,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز سمير الصحي",
+    "type": "hospital",
+    "latitude": 15.549725763404918,
+    "longitude": 32.53919250210085,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى العيون",
+    "type": "hospital",
+    "latitude": 15.612281777035284,
+    "longitude": 32.54531725141293,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى جرش",
+    "type": "hospital",
+    "latitude": 15.572935578023527,
+    "longitude": 32.57753750826974,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المركز الصحي",
+    "type": "hospital",
+    "latitude": 15.097766548848053,
+    "longitude": 33.22393374477129,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الساحة",
+    "type": "hospital",
+    "latitude": 15.566242782781645,
+    "longitude": 32.55816580247991,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى حراء الطبي",
+    "type": "hospital",
+    "latitude": 15.584100900000001,
+    "longitude": 32.54597335,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز رزان الصحي",
+    "type": "hospital",
+    "latitude": 15.55550400947169,
+    "longitude": 32.53751212259773,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى دار العلاج",
+    "type": "hospital",
+    "latitude": 15.577180909217166,
+    "longitude": 32.559129880597276,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز بنك الدم",
+    "type": "hospital",
+    "latitude": 15.597138499810718,
+    "longitude": 32.52990372574335,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى المقرن الجامعي",
+    "type": "hospital",
+    "latitude": 15.604274000083793,
+    "longitude": 32.51650216499534,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الجموعية",
+    "type": "hospital",
+    "latitude": 15.747889126389273,
+    "longitude": 32.52371818579591,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الامل الوطني الخرطوم 2",
+    "type": "hospital",
+    "latitude": 15.591827389010644,
+    "longitude": 32.541797372050475,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الجودة",
+    "type": "hospital",
+    "latitude": 15.576239830223178,
+    "longitude": 32.53457020990975,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي قرية نجرو",
+    "type": "hospital",
+    "latitude": 14.4722112,
+    "longitude": 33.2470902,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز جمانة لطب الاسنان",
+    "type": "hospital",
+    "latitude": 15.61103260400883,
+    "longitude": 32.61971911968191,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى سعد ابو العلا",
+    "type": "hospital",
+    "latitude": 15.562161472510063,
+    "longitude": 32.543944841634605,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى النهضة",
+    "type": "hospital",
+    "latitude": 15.62431650839449,
+    "longitude": 32.41846727520408,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي ود مدني",
+    "type": "hospital",
+    "latitude": 14.396197313033776,
+    "longitude": 33.52655004525163,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الطبيب المركزي",
+    "type": "hospital",
+    "latitude": 15.565005472124184,
+    "longitude": 32.54965959497691,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الام و الطفل جايكا",
+    "type": "hospital",
+    "latitude": 15.663940315220353,
+    "longitude": 32.41806498577199,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفی الأطباء",
+    "type": "hospital",
+    "latitude": 15.57216859504095,
+    "longitude": 32.550944342989766,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى بشائر الخاص ٢",
+    "type": "hospital",
+    "latitude": 15.610162266666668,
+    "longitude": 32.61865293333333,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الشامي لطب العيون",
+    "type": "hospital",
+    "latitude": 15.594291418366618,
+    "longitude": 32.56087243194012,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز ثريا لغسيل  الكلى",
+    "type": "hospital",
+    "latitude": 14.401432463949488,
+    "longitude": 33.505560859521516,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الأمل التخصصي",
+    "type": "hospital",
+    "latitude": 15.598025305062617,
+    "longitude": 32.57161572737832,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي الشرطة",
+    "type": "hospital",
+    "latitude": 14.398367545361433,
+    "longitude": 33.53301538433777,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مجمع حي الجامعة الطبي",
+    "type": "hospital",
+    "latitude": 15.598596900000002,
+    "longitude": 32.61619355,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى تبارك للاطفال",
+    "type": "hospital",
+    "latitude": 15.609144662165512,
+    "longitude": 32.625936528744596,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى خالد احمد حميدة",
+    "type": "hospital",
+    "latitude": 15.531766629092697,
+    "longitude": 32.55600211340218,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى جامعة الرازي",
+    "type": "hospital",
+    "latitude": 15.514181243405762,
+    "longitude": 32.592511223959725,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الشهيد المعز العبادي",
+    "type": "hospital",
+    "latitude": 15.764727230869694,
+    "longitude": 32.583632135517426,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الأبيض التعليمي",
+    "type": "hospital",
+    "latitude": 13.185761873356133,
+    "longitude": 30.22300994884171,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى امبدة النموذجي",
+    "type": "hospital",
+    "latitude": 15.664686198822416,
+    "longitude": 32.41814732482271,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى نور العيون",
+    "type": "hospital",
+    "latitude": 15.547450829069911,
+    "longitude": 32.558751125855736,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز السلام الطبي",
+    "type": "hospital",
+    "latitude": 15.752329166805147,
+    "longitude": 32.52429826654814,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي اربجي الريفي",
+    "type": "hospital",
+    "latitude": 14.726382214057464,
+    "longitude": 33.35240658170637,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الكلية الحربية",
+    "type": "hospital",
+    "latitude": 15.83581623416492,
+    "longitude": 32.516502005883495,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي الخمجاب والتبنة",
+    "type": "hospital",
+    "latitude": 15.804687892684843,
+    "longitude": 32.5897010788586,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "برج الامل",
+    "type": "hospital",
+    "latitude": 15.599079271679422,
+    "longitude": 32.53123789110806,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "عيادة الحارة 48",
+    "type": "hospital",
+    "latitude": 15.737032015181917,
+    "longitude": 32.478071071807854,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحى الشيبراب",
+    "type": "hospital",
+    "latitude": 14.361231895574605,
+    "longitude": 33.15612401278908,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الخرطوم",
+    "type": "hospital",
+    "latitude": 15.59793686666988,
+    "longitude": 32.53247781478183,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "hedalia IDP HC",
+    "type": "hospital",
+    "latitude": 16.18352954809728,
+    "longitude": 36.10181131575168,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "عيادة خليل للاطفال",
+    "type": "hospital",
+    "latitude": 15.683325068816755,
+    "longitude": 32.4998993528915,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي ابوحمد التعليمى",
+    "type": "hospital",
+    "latitude": 19.5369674463403,
+    "longitude": 33.3357116236587,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الشرطة عطبرة",
+    "type": "hospital",
+    "latitude": 17.68124177160069,
+    "longitude": 33.97653885486811,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مليط الريفى",
+    "type": "hospital",
+    "latitude": 14.132654030827698,
+    "longitude": 25.551128619154273,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى السلاح الطبى الدمازين",
+    "type": "hospital",
+    "latitude": 11.798853445401903,
+    "longitude": 34.35211997441307,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي الجنينة التعليمى",
+    "type": "hospital",
+    "latitude": 13.444034671155858,
+    "longitude": 22.450815880941796,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي أردمتا",
+    "type": "hospital",
+    "latitude": 13.480216825022168,
+    "longitude": 22.48205863697168,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز طبى ابيى",
+    "type": "hospital",
+    "latitude": 9.606179484835696,
+    "longitude": 28.430644200923602,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى التخصصي",
+    "type": "hospital",
+    "latitude": 13.44022465207712,
+    "longitude": 22.418865005087476,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي ارارا",
+    "type": "hospital",
+    "latitude": 12.72787869037371,
+    "longitude": 22.165184635742097,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى كاس",
+    "type": "hospital",
+    "latitude": 12.507177310479243,
+    "longitude": 24.292923398775148,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي ابوجلفا",
+    "type": "hospital",
+    "latitude": 14.729958233034946,
+    "longitude": 33.47668868330394,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى كبكابية",
+    "type": "hospital",
+    "latitude": 13.644462509589891,
+    "longitude": 24.08953062653798,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى زالنجي",
+    "type": "hospital",
+    "latitude": 12.904313447435639,
+    "longitude": 23.476045977680805,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحى المسعودية",
+    "type": "hospital",
+    "latitude": 15.308191880987888,
+    "longitude": 32.864503524306635,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى سربا",
+    "type": "hospital",
+    "latitude": 13.804957767897138,
+    "longitude": 22.501226182811333,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى العباسية",
+    "type": "hospital",
+    "latitude": 12.161612667247503,
+    "longitude": 31.293486618378978,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الثناء",
+    "type": "hospital",
+    "latitude": 15.549726581078811,
+    "longitude": 32.54797715469808,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى تمبول",
+    "type": "hospital",
+    "latitude": 14.922638894401222,
+    "longitude": 33.42030647500045,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الشيخ التخصصي",
+    "type": "hospital",
+    "latitude": 15.540262706348583,
+    "longitude": 32.567746694533284,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الميلج الاقليمى التخصصى",
+    "type": "hospital",
+    "latitude": 15.013515622472225,
+    "longitude": 33.098014509598066,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الكرمك",
+    "type": "hospital",
+    "latitude": 10.556390084577126,
+    "longitude": 34.282555454374474,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى رفاعة التعليمى",
+    "type": "hospital",
+    "latitude": 14.763016749966923,
+    "longitude": 33.373790347592944,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مجمع مستشفي كوستي التعليمى",
+    "type": "hospital",
+    "latitude": 13.160299440289895,
+    "longitude": 32.66959381662696,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي سيدون",
+    "type": "hospital",
+    "latitude": 17.32995650814829,
+    "longitude": 34.441725401716404,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الفاشرجنوب",
+    "type": "hospital",
+    "latitude": 13.609205086187151,
+    "longitude": 25.358149812928055,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز طوارئ نيالا للاطفال",
+    "type": "hospital",
+    "latitude": 12.063326760904342,
+    "longitude": 24.86668820547161,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى ام ضوابان",
+    "type": "hospital",
+    "latitude": 15.422536143502512,
+    "longitude": 32.83654927370154,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى المواني",
+    "type": "hospital",
+    "latitude": 19.636232882259566,
+    "longitude": 37.22136009499636,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى أجوك",
+    "type": "hospital",
+    "latitude": 9.359156804341557,
+    "longitude": 28.598787849154952,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 12.272172026143753,
+    "longitude": 22.70148561726112,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "2 مركز شاكرين",
+    "type": "clinic",
+    "latitude": 14.04235765,
+    "longitude": 35.39329145,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى النو",
+    "type": "hospital",
+    "latitude": 15.687885092724134,
+    "longitude": 32.49144212553908,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "First Aid Hamdayet",
+    "type": null,
+    "latitude": 14.268603199999998,
+    "longitude": 36.532204199999995,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "pharmacy",
+    "latitude": 19.536601100000002,
+    "longitude": 33.3320831,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي قرية ندي",
+    "type": "clinic",
+    "latitude": 18.7261287864942,
+    "longitude": 33.64587791111284,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 13.0658703145808,
+    "longitude": 21.986383479627577,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى ابن سينا",
+    "type": "hospital",
+    "latitude": 15.576892366323372,
+    "longitude": 32.54319575691945,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي الحلة الجديدة",
+    "type": "clinic",
+    "latitude": 14.747074849999999,
+    "longitude": 33.301225,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي الكلاكلة صنقعت",
+    "type": "clinic",
+    "latitude": 15.457693017076016,
+    "longitude": 32.49894150854092,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى المدرعات",
+    "type": "hospital",
+    "latitude": 15.54118523429267,
+    "longitude": 32.50485105860781,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مكة لطب العيون",
+    "type": "hospital",
+    "latitude": 15.480902012944897,
+    "longitude": 32.48275118611302,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى القمة التخصصي",
+    "type": "hospital",
+    "latitude": 15.5666459814481,
+    "longitude": 32.549976923577276,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الحاج الصافي",
+    "type": "hospital",
+    "latitude": 15.651038555226854,
+    "longitude": 32.531803539868996,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الامل الوطني",
+    "type": "hospital",
+    "latitude": 15.62796461111706,
+    "longitude": 32.5521622001823,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى امبريال",
+    "type": "hospital",
+    "latitude": 15.602859155422506,
+    "longitude": 32.53634507810218,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى افريقيا التخصصي للانف والاذن والحنجرة",
+    "type": "hospital",
+    "latitude": 15.585290826318783,
+    "longitude": 32.54655535275496,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "جابر ابو العز",
+    "type": "hospital",
+    "latitude": 15.586489950000004,
+    "longitude": 32.535011700000005,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الدسوقي التخصصي",
+    "type": "hospital",
+    "latitude": 15.6997506,
+    "longitude": 32.47670595,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى اسيا",
+    "type": "hospital",
+    "latitude": 15.645771666666665,
+    "longitude": 32.4901848,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى دقنة",
+    "type": "hospital",
+    "latitude": 19.622811917971784,
+    "longitude": 37.21642105851386,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "doctors",
+    "latitude": 14.138025132813445,
+    "longitude": 25.527558038378825,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى ابراهيم مالك",
+    "type": "hospital",
+    "latitude": 15.53879047191821,
+    "longitude": 32.5526022956634,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الانجاز",
+    "type": "hospital",
+    "latitude": 15.575469329668838,
+    "longitude": 32.53426497157412,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الزيتونة",
+    "type": "hospital",
+    "latitude": 15.600433753182468,
+    "longitude": 32.53341457194907,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مودة الطبي",
+    "type": "hospital",
+    "latitude": 15.60092517255366,
+    "longitude": 32.53229519170318,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الوالدين الخير لطب العيون",
+    "type": "hospital",
+    "latitude": 15.643252409254323,
+    "longitude": 32.46760992903569,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي الامل",
+    "type": "hospital",
+    "latitude": 15.251546938154517,
+    "longitude": 32.52438324736823,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 13.470977982358702,
+    "longitude": 22.47347710211079,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى وعد التخصصي",
+    "type": "hospital",
+    "latitude": 15.644294948322285,
+    "longitude": 32.46492539058781,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي الثورة الحارة 17",
+    "type": "clinic",
+    "latitude": 15.712684286629248,
+    "longitude": 32.48899631444362,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي المنصورة",
+    "type": "clinic",
+    "latitude": 15.61583113831342,
+    "longitude": 32.456469895946775,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "صيدليه العدلان",
+    "type": "pharmacy",
+    "latitude": 15.472190275254569,
+    "longitude": 32.471250779917206,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي الشميلياب",
+    "type": "hospital",
+    "latitude": 14.056837508717148,
+    "longitude": 35.477446903272956,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "عيادات عبد المنعم محمد",
+    "type": "hospital",
+    "latitude": 15.645477666007464,
+    "longitude": 32.4899627975101,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى سوبا الجامعي",
+    "type": "hospital",
+    "latitude": 15.508492054810729,
+    "longitude": 32.62516463820853,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Khartoum Breast Care center",
+    "type": "hospital",
+    "latitude": 15.560254980534328,
+    "longitude": 32.5521320823951,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Nyala Educational Hospital",
+    "type": "hospital",
+    "latitude": 12.056704664717309,
+    "longitude": 24.875852377107062,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الروضة",
+    "type": "hospital",
+    "latitude": 15.682763401045,
+    "longitude": 32.49972627019066,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مكة",
+    "type": "hospital",
+    "latitude": 15.451204157057248,
+    "longitude": 36.39413711494795,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى سنار",
+    "type": "hospital",
+    "latitude": 13.547828576139564,
+    "longitude": 33.61418088475583,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "clinic",
+    "latitude": 18.7863426,
+    "longitude": 33.57912045,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 12.56780411698364,
+    "longitude": 22.331704103429058,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي ام سقطه",
+    "type": "hospital",
+    "latitude": 13.318526382562334,
+    "longitude": 35.05904968688702,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Bahar-Abyad Hospital",
+    "type": "hospital",
+    "latitude": 13.160519694216726,
+    "longitude": 32.67095636558173,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز السودان للقلب",
+    "type": "hospital",
+    "latitude": 15.547413017150749,
+    "longitude": 32.55699910378396,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى شرق النيل",
+    "type": "hospital",
+    "latitude": 15.598378993215462,
+    "longitude": 32.60471272753867,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المستشفى الدولي",
+    "type": "hospital",
+    "latitude": 15.641316333298068,
+    "longitude": 32.52629677419079,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي امبدة الحارة 29",
+    "type": "clinic",
+    "latitude": 15.696575458986182,
+    "longitude": 32.45927252435279,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Health Care Center",
+    "type": "hospital",
+    "latitude": 15.673063197962342,
+    "longitude": 32.54514667120006,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز طب الاسنان الحديث",
+    "type": "hospital",
+    "latitude": 15.600940099999999,
+    "longitude": 32.530429549999994,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المركز الطبي الحديث",
+    "type": "hospital",
+    "latitude": 15.594533799999999,
+    "longitude": 32.53987604999999,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى طيبة",
+    "type": "hospital",
+    "latitude": 15.723352769536056,
+    "longitude": 32.4853177347519,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "AlShahyda Nada",
+    "type": "hospital",
+    "latitude": 15.653962977939802,
+    "longitude": 32.62398198855884,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Aldroushap",
+    "type": "hospital",
+    "latitude": 15.713562303850287,
+    "longitude": 32.578186792074945,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى شفاء العليل",
+    "type": "hospital",
+    "latitude": 15.687824162355001,
+    "longitude": 32.45162232534285,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "صيدلية ام المؤمنين",
+    "type": "pharmacy",
+    "latitude": 14.733211696351656,
+    "longitude": 33.30172078044607,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الفيصل التخصصي",
+    "type": "hospital",
+    "latitude": 15.59869646467059,
+    "longitude": 32.52984182170527,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Health care Hospital",
+    "type": "hospital",
+    "latitude": 15.562431950852492,
+    "longitude": 32.536463416016744,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 15.563229582774945,
+    "longitude": 32.536921251017795,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 15.555612780807524,
+    "longitude": 32.652971031668756,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحى الحلفايا",
+    "type": "clinic",
+    "latitude": 15.706142744822825,
+    "longitude": 32.54906569711477,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Asbab hospital",
+    "type": "hospital",
+    "latitude": 15.63794458716615,
+    "longitude": 32.56763193986001,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى البان جديد",
+    "type": "hospital",
+    "latitude": 15.617108049844004,
+    "longitude": 32.63203132625738,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى السويدي طب الاطفال الخيرية",
+    "type": "hospital",
+    "latitude": 15.567908141205487,
+    "longitude": 32.57525142991281,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Kaduqli Hospital",
+    "type": "hospital",
+    "latitude": 11.00077476828116,
+    "longitude": 29.717444309370105,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المستشفى السعودى للولادة",
+    "type": "hospital",
+    "latitude": 15.669716176987324,
+    "longitude": 32.482588466657695,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 14.231248674986317,
+    "longitude": 32.9853299353585,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المستشفى السويدي الخيري للأطفال",
+    "type": null,
+    "latitude": 15.567835599999997,
+    "longitude": 32.57547439999999,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الاكاديميى الخيري",
+    "type": "hospital",
+    "latitude": 15.552045450000003,
+    "longitude": 32.5422567,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى بحري التعليمي",
+    "type": "hospital",
+    "latitude": 15.625626043710609,
+    "longitude": 32.52867040981833,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المركز الدولي للسمع المتطور",
+    "type": "hospital",
+    "latitude": 15.60116005,
+    "longitude": 32.529664,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي الريان",
+    "type": "clinic",
+    "latitude": 15.628332050000001,
+    "longitude": 32.435263400000004,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مهيرة",
+    "type": "hospital",
+    "latitude": 15.58264679611008,
+    "longitude": 32.569347819079944,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 13.23378922437487,
+    "longitude": 22.4713961195515,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 12.709497208521848,
+    "longitude": 22.159083275500546,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Royal Care International Hospital",
+    "type": "hospital",
+    "latitude": 15.599611969901732,
+    "longitude": 32.570882648710445,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى رويال كير",
+    "type": "hospital",
+    "latitude": 15.59960981440675,
+    "longitude": 32.57088103312827,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 13.51444388001117,
+    "longitude": 22.678610588054084,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Police Hospital",
+    "type": "hospital",
+    "latitude": 15.611387585792304,
+    "longitude": 32.55915146808023,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى نيالا التركى",
+    "type": "hospital",
+    "latitude": 12.018556518535675,
+    "longitude": 24.894719136812704,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الدبه",
+    "type": "hospital",
+    "latitude": 18.043478534920368,
+    "longitude": 30.955457133172647,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الصداقة الصيني",
+    "type": "hospital",
+    "latitude": 15.658295600495665,
+    "longitude": 32.46228876194468,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى ابو عنجة",
+    "type": "hospital",
+    "latitude": 15.628968036977955,
+    "longitude": 32.47246910226627,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى امدرمان للاطفال",
+    "type": "hospital",
+    "latitude": 15.641532059574782,
+    "longitude": 32.488640428208406,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى النيل الازرق",
+    "type": "hospital",
+    "latitude": 15.643519547016528,
+    "longitude": 32.48911431786491,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الوداد",
+    "type": "hospital",
+    "latitude": 15.644033461858385,
+    "longitude": 32.4890890555227,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى أم درمان التعليمي",
+    "type": "hospital",
+    "latitude": 15.641946343399194,
+    "longitude": 32.48736525131586,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى أحمد قاسم للاطفال",
+    "type": "hospital",
+    "latitude": 15.637635553055226,
+    "longitude": 32.53245720865704,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى جبل أولياء, السودان",
+    "type": "hospital",
+    "latitude": 15.243513232741611,
+    "longitude": 32.49815141594537,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "clinic",
+    "latitude": 14.244860475770626,
+    "longitude": 32.99528416877368,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مدينة الخرطوم لتنمية قدرات الاطفال",
+    "type": "hospital",
+    "latitude": 15.55710541785169,
+    "longitude": 32.50528928266939,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى البلك للأطفال",
+    "type": "hospital",
+    "latitude": 15.681204042812476,
+    "longitude": 32.481015022563525,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "صيدلية شواطئ ام در",
+    "type": "pharmacy",
+    "latitude": 15.668931080552497,
+    "longitude": 32.5056447480649,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 15.064996870935524,
+    "longitude": 23.259174830736992,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "MSF office",
+    "type": "clinic",
+    "latitude": 9.5842906,
+    "longitude": 28.459738849999997,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى عبد العال الإدريسي",
+    "type": "hospital",
+    "latitude": 15.630632529343028,
+    "longitude": 32.55973270712117,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "clinic",
+    "latitude": 12.07128138265891,
+    "longitude": 24.931002685397434,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "clinic",
+    "latitude": 12.070542306915998,
+    "longitude": 24.919503223257273,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى عبودة",
+    "type": "hospital",
+    "latitude": 15.69613394079518,
+    "longitude": 32.48044877868582,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز يشفين للسمع",
+    "type": "hospital",
+    "latitude": 15.647679683421648,
+    "longitude": 32.49382722410522,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى بست كير",
+    "type": "hospital",
+    "latitude": 15.554464380582342,
+    "longitude": 32.503499707730775,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "healthcare centre",
+    "type": "clinic",
+    "latitude": 15.014603075913909,
+    "longitude": 33.0900280957926,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مكة الخيري",
+    "type": "hospital",
+    "latitude": 15.657335865460803,
+    "longitude": 32.48591728145899,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "clinic",
+    "latitude": 11.8297367160331,
+    "longitude": 24.637152017886137,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": null,
+    "latitude": 13.423679766697012,
+    "longitude": 22.431675060292616,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 15.500531685334934,
+    "longitude": 32.56006898112386,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي الجوغانة",
+    "type": "hospital",
+    "latitude": 11.111467236881843,
+    "longitude": 25.294580422166653,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى اليمامة",
+    "type": "hospital",
+    "latitude": 13.161385090355656,
+    "longitude": 32.67028146060734,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "المستشفى العسكرى",
+    "type": "hospital",
+    "latitude": 13.138397885896158,
+    "longitude": 32.68203707338445,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الهلالية التعليمى",
+    "type": "hospital",
+    "latitude": 14.943611007360127,
+    "longitude": 33.24202821010092,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الدبيبات",
+    "type": "hospital",
+    "latitude": 12.502651579691772,
+    "longitude": 29.797527492143896,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي السلاح الطبي - الجنينة",
+    "type": "hospital",
+    "latitude": 13.47535189198352,
+    "longitude": 22.479751827569366,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي مستري",
+    "type": "hospital",
+    "latitude": 13.126174868943252,
+    "longitude": 22.18529317053451,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى القضارف التعليمى للعيون",
+    "type": "hospital",
+    "latitude": 14.03913045,
+    "longitude": 35.3879703,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "د.مبارك أحمد حسن",
+    "type": "hospital",
+    "latitude": 15.2218711,
+    "longitude": 36.17776249999999,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى ليبيا",
+    "type": "hospital",
+    "latitude": 15.647460250000002,
+    "longitude": 32.418679350000005,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي ام بادوبا",
+    "type": "hospital",
+    "latitude": 15.856431930880236,
+    "longitude": 32.5146851271742,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "Alsoriba Health care center",
+    "type": "hospital",
+    "latitude": 14.31679521009849,
+    "longitude": 33.50201346621474,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى القضارف التعليمي",
+    "type": "hospital",
+    "latitude": 14.0399907496868,
+    "longitude": 35.3873594796343,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز الصحفيين الصحي",
+    "type": "hospital",
+    "latitude": 15.681374622714106,
+    "longitude": 32.718149759530924,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الفتح",
+    "type": "hospital",
+    "latitude": 15.804103983497415,
+    "longitude": 32.39075583550797,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الشهيد علي عبد الفتاح",
+    "type": "hospital",
+    "latitude": 15.723851151841378,
+    "longitude": 32.57996063254142,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي الحصاحيصا التعليمي",
+    "type": "hospital",
+    "latitude": 14.729448577603785,
+    "longitude": 33.29846309181465,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز الامل الصحي",
+    "type": "hospital",
+    "latitude": 15.44248055,
+    "longitude": 32.53969675,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي التاهيلي مدني",
+    "type": "hospital",
+    "latitude": 14.420504252480749,
+    "longitude": 33.486066860087156,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى السلام لامراض القلب",
+    "type": "hospital",
+    "latitude": 15.509701723118038,
+    "longitude": 32.66313951438723,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى اللواء عمر صاوي",
+    "type": "hospital",
+    "latitude": 15.612417227154573,
+    "longitude": 32.55964179313248,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الشريف للامراض النفسية",
+    "type": "hospital",
+    "latitude": 15.606473745609161,
+    "longitude": 32.57900295042776,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى يستبشرون",
+    "type": "hospital",
+    "latitude": 15.57573458017362,
+    "longitude": 32.558012068876245,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى فيوتشر التخصصي",
+    "type": "hospital",
+    "latitude": 15.567736644170655,
+    "longitude": 32.565348024713174,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى التاهيل",
+    "type": "hospital",
+    "latitude": 14.057379649995815,
+    "longitude": 35.36998396666716,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز الزرقاء التخصصي لطب وجراحة العيون",
+    "type": "hospital",
+    "latitude": 15.5769909,
+    "longitude": 32.549746,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى شوامخ",
+    "type": "hospital",
+    "latitude": 15.577559549999997,
+    "longitude": 32.54923495,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز دكتورة سلمي لغسيل الكلي",
+    "type": "hospital",
+    "latitude": 15.602751789782591,
+    "longitude": 32.53861111586846,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مكة لطب العيون",
+    "type": "hospital",
+    "latitude": 15.577106638694652,
+    "longitude": 32.56645671292987,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "كلينك جامعة الخرطوم",
+    "type": "hospital",
+    "latitude": 15.611222957254187,
+    "longitude": 32.54522366824459,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "عيادة الريان",
+    "type": "hospital",
+    "latitude": 15.565630994087776,
+    "longitude": 32.5787309776625,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي كرري العجيجة",
+    "type": "hospital",
+    "latitude": 15.749144881002046,
+    "longitude": 32.52420626902676,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز طيبه للاورام",
+    "type": "hospital",
+    "latitude": 15.591096198016242,
+    "longitude": 32.52773402210817,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي ود الحداد التخصصي",
+    "type": "hospital",
+    "latitude": 13.822402424390901,
+    "longitude": 33.538680378854146,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز السودان للعيون",
+    "type": "hospital",
+    "latitude": 15.553743566036225,
+    "longitude": 32.54631127410404,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفي التكينة",
+    "type": "hospital",
+    "latitude": 15.21181023906235,
+    "longitude": 33.06172955349373,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز وارفكو لطب الاسنان",
+    "type": "hospital",
+    "latitude": 15.5946890679222,
+    "longitude": 32.57334034082405,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى انطاليا",
+    "type": "hospital",
+    "latitude": 15.599015899999998,
+    "longitude": 32.5300824,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى اهل الحضرة الخاص",
+    "type": "hospital",
+    "latitude": 15.600926450000001,
+    "longitude": 32.530094000000005,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستوصف حي الضقالة",
+    "type": "hospital",
+    "latitude": 14.7197714,
+    "longitude": 33.31479095,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى التهامي",
+    "type": "hospital",
+    "latitude": 15.712492449999996,
+    "longitude": 32.476465700000006,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى بشائر التعليمي",
+    "type": "hospital",
+    "latitude": 15.48964074467834,
+    "longitude": 32.55179397050528,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الامام عبد الرحمن المهدي",
+    "type": "hospital",
+    "latitude": 15.592991080516136,
+    "longitude": 32.46079284187455,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الندى",
+    "type": "hospital",
+    "latitude": 15.666225575223681,
+    "longitude": 32.48220384723473,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى القوصي",
+    "type": "hospital",
+    "latitude": 15.667394149999998,
+    "longitude": 32.4542008,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الصالحين",
+    "type": "hospital",
+    "latitude": 15.67918462461155,
+    "longitude": 32.43689035395298,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى قطر الندي",
+    "type": "hospital",
+    "latitude": 15.66363152518146,
+    "longitude": 32.419640015207634,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الملازمين",
+    "type": "hospital",
+    "latitude": 15.640824552790182,
+    "longitude": 32.4973305217736,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى التجاني الماحي",
+    "type": "hospital",
+    "latitude": 15.64121384831114,
+    "longitude": 32.48246037625093,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الوالدين للعيون",
+    "type": "hospital",
+    "latitude": 15.643519721377999,
+    "longitude": 32.46942760938571,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مدينة البراحة الطبية",
+    "type": "hospital",
+    "latitude": 15.673145645110024,
+    "longitude": 32.544300836173306,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى بحري العسكري",
+    "type": "hospital",
+    "latitude": 15.624041976034164,
+    "longitude": 32.55119324503915,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى احمد قاسم",
+    "type": "hospital",
+    "latitude": 15.637666821975538,
+    "longitude": 32.532554676095344,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مجمع كنان الطبي",
+    "type": "hospital",
+    "latitude": 15.63637664412361,
+    "longitude": 32.53059727403327,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز نور الهدي للعلاج و التاهيل",
+    "type": "hospital",
+    "latitude": 15.661206828950387,
+    "longitude": 32.54932532449285,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى دكتور نجيب",
+    "type": "hospital",
+    "latitude": 15.641793273405739,
+    "longitude": 32.491596063818434,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز السلامة للعلاج الطبيعي",
+    "type": "hospital",
+    "latitude": 15.516105804111909,
+    "longitude": 32.49708133694857,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي السجانة",
+    "type": "hospital",
+    "latitude": 15.581903010359857,
+    "longitude": 32.52876984903522,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز الحكمة الطبي",
+    "type": "hospital",
+    "latitude": 15.600475140745786,
+    "longitude": 32.53157548742969,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز صحي المايقوما",
+    "type": "hospital",
+    "latitude": 15.56959781269874,
+    "longitude": 32.530821372003636,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "صحة وعافية",
+    "type": "hospital",
+    "latitude": 15.571404999999997,
+    "longitude": 32.5349584,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مجمع سبأ الطبي",
+    "type": "hospital",
+    "latitude": 15.5997952227105,
+    "longitude": 32.53246189019843,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز الرومي الطبي",
+    "type": "hospital",
+    "latitude": 15.691341894856444,
+    "longitude": 32.47649887556258,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الاحتياطي المركزي",
+    "type": "hospital",
+    "latitude": 15.431187797982707,
+    "longitude": 32.50805972344586,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مركز ام عشر الصحي",
+    "type": "hospital",
+    "latitude": 15.42128567857619,
+    "longitude": 32.493521850424536,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": null,
+    "latitude": 13.127016188955007,
+    "longitude": 24.27999768899148,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": null,
+    "type": "hospital",
+    "latitude": 14.885687206227944,
+    "longitude": 25.508951365204595,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى مروي التخصصي",
+    "type": "hospital",
+    "latitude": 18.484139240150814,
+    "longitude": 31.838807780927766,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  },
+  {
+    "name": "مستشفى الوالدين الخير لطب العيون",
+    "type": "hospital",
+    "latitude": 15.643288846511037,
+    "longitude": 32.46784588656635,
+    "address": "Unknown",
+    "contact": "Unknown",
+    "working_hours": "Unknown"
+  }
+]

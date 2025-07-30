@@ -1,0 +1,587 @@
+ [
+    {
+        "name": "Al Amal Hospital",
+        "arabic_name": "مستشفى الأمل",
+        "specialty": "General/Emergency",
+        "latitude": 15.5672,
+        "longitude": 32.5345,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Mecca Hospital (Khartoum)",
+        "arabic_name": "مستشفى مكة - الخرطوم",
+        "specialty": "General/Emergency",
+        "latitude": 15.5890,
+        "longitude": 32.5390,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Mecca Hospital (Omdurman)",
+        "arabic_name": "مستشفى مكة - أم درمان",
+        "specialty": "General/Emergency",
+        "latitude": 15.5800,
+        "longitude": 32.5250,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Al Saha Specialized Hospital",
+        "arabic_name": "مستشفى الساحة التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6000,
+        "longitude": 32.5400,
+        "contact": "+249 90 003 8977",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Yastabshiron Hospital",
+        "arabic_name": "مستشفى يستبشرون",
+        "specialty": "General/Emergency",
+        "latitude": 15.5950,
+        "longitude": 32.5430,
+        "contact": "+249 18 323 7804",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Soba Hospital University of Khartoum",
+        "arabic_name": "مستشفى سوبا الجامعي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6150,
+        "longitude": 32.5500,
+        "contact": "+249 18 338 3588",
+        "working_hours": "8am to 6pm"
+    },
+    {
+        "name": "Al-Ragi University hospital",
+        "arabic_name": "مستشفى الراقي الجامعي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6000,
+        "longitude": 32.5300,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Bashair University Hospital",
+        "arabic_name": "مستشفى بشائر الجامعي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6100,
+        "longitude": 32.5400,
+        "contact": "+249 92 561 4614",
+        "working_hours": "24h"
+    },
+    {
+        "name": "El-Sheikh Hospital",
+        "arabic_name": "مستشفى الشيخ التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6050,
+        "longitude": 32.5350,
+        "contact": "+249 18 323 0349",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Emergency Hospital Khartoum South",
+        "arabic_name": "مستشفى حوادث الخرطوم جنوب",
+        "specialty": "Emergency/Trauma",
+        "latitude": 15.5900,
+        "longitude": 32.5200,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "AlFouad Hospital",
+        "arabic_name": "مستشفى الفؤاد التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.5955,
+        "longitude": 32.5330,
+        "contact": "+249 18 343 0261",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Ibrahim Malik Teaching Hospital",
+        "arabic_name": "مستشفى إبراهيم مالك التعليمي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6080,
+        "longitude": 32.5390,
+        "contact": "+249 18 342 8245",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Al Academy charity hospital",
+        "arabic_name": "المستشفى الأكاديمي الخيري",
+        "specialty": "General/Emergency",
+        "latitude": 15.5805,
+        "longitude": 32.5325,
+        "contact": "+249 12 076 2331",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Future Specialized Hospital",
+        "arabic_name": "مستشفى المستقبل التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6050,
+        "longitude": 32.5405,
+        "contact": "+249 99 687 0978",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Hira Hospital",
+        "arabic_name": "مستشفى حراء",
+        "specialty": "General/Emergency",
+        "latitude": 15.5980,
+        "longitude": 32.5360,
+        "contact": "+249 91 280 9292",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Ibn Sina Specialized Hospital",
+        "arabic_name": "مستشفى ابن سينا التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6025,
+        "longitude": 32.5380,
+        "contact": "+249 92 566 7967",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Royal Care International Hospital",
+        "arabic_name": "مُستشفى رويال كير العالمية",
+        "specialty": "General/Emergency",
+        "latitude": 15.5970,
+        "longitude": 32.5355,
+        "contact": "+249 15 655 0154",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Fedail Hospital",
+        "arabic_name": "مستشفى فضيل",
+        "specialty": "General/Emergency",
+        "latitude": 15.6007,
+        "longitude": 32.5335,
+        "contact": "+249 18 376 6661",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Ibn Khaldoun Hospital",
+        "arabic_name": "مستشفى ابن خلدون",
+        "specialty": "General/Emergency",
+        "latitude": 15.5950,
+        "longitude": 32.5400,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Al Klinic Hospital",
+        "arabic_name": "مستشفى الكلينك",
+        "specialty": "General/Emergency",
+        "latitude": 15.6010,
+        "longitude": 32.5350,
+        "contact": "Unknown",
+        "working_hours": "Friday closed, others 24h"
+    },
+    {
+        "name": "Ribat University Hospital",
+        "arabic_name": "مستشفى الرباط الجامعي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6030,
+        "longitude": 32.5340,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Federal Central Police Hospital",
+        "arabic_name": "مستشفى الشرطة الإتحادي المركزي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6040,
+        "longitude": 32.5330,
+        "contact": "+249 18 327 1696",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Sudan Heart Center",
+        "arabic_name": "مركز السودان للقلب",
+        "specialty": "Cardiology/Cardiac Surgery",
+        "latitude": 15.6070,
+        "longitude": 32.5350,
+        "contact": "+249 18 323 2137",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Jebel Aulia Hospital",
+        "arabic_name": "مستشفى جبل أولياء",
+        "specialty": "General/Emergency",
+        "latitude": 15.6150,
+        "longitude": 32.5300,
+        "contact": "+249 18 368 0044",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Bashair University Hospital",
+        "arabic_name": "مستشفى بشائر الجامعي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6100,
+        "longitude": 32.5400,
+        "contact": "+249 92 561 4614",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Turkish Hospital",
+        "arabic_name": "المستشفى التركي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6005,
+        "longitude": 32.5370,
+        "contact": "+249 11 444 4181",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Baraha Medical City",
+        "arabic_name": "مدينة البراحة الطبية",
+        "specialty": "General/Emergency",
+        "latitude": 15.6105,
+        "longitude": 32.5310,
+        "contact": "+249 18 521 2222",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "People's Hospital",
+        "arabic_name": "مستشفى الشعب التعليمي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6025,
+        "longitude": 32.5325,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Al Faisal Specialized Hospital",
+        "arabic_name": "مستشفى الفيصل التخصصي بالخرطوم",
+        "specialty": "General/Emergency",
+        "latitude": 15.6000,
+        "longitude": 32.5305,
+        "contact": "+249 15 577 1000",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Khartoum Teaching Hospital",
+        "arabic_name": "مستشفي الخرطوم التعليمي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6120,
+        "longitude": 32.5360,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Al Academy charity hospital",
+        "arabic_name": "المستشفى الأكاديمي الخيري",
+        "specialty": "General/Emergency",
+        "latitude": 15.5805,
+        "longitude": 32.5325,
+        "contact": "+249 12 076 2331",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Alzaytouna Specialist Hospital",
+        "arabic_name": "مُستشفى الزيتونة التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6020,
+        "longitude": 32.5340,
+        "contact": "+249 18 374 5000",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Mecca Eye Complex",
+        "arabic_name": "مجمع مكة لطب العيون",
+        "specialty": "Ophthalmology",
+        "latitude": 15.6030,
+        "longitude": 32.5350,
+        "contact": "+249 18 332 0078",
+        "working_hours": "7am to 3pm"
+    },
+    {
+        "name": "Saad Abu Alela Hospital",
+        "arabic_name": "مستشفى سعد أبو العلا التعليمي",
+        "specialty": "General/Emergency",
+        "latitude": 15.5995,
+        "longitude": 32.5315,
+        "contact": "+249 15 488 7355",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Salam Centre for Cardiac Surgery",
+        "arabic_name": "مستشفى السلام لجراحة القلب",
+        "specialty": "Cardiology/Cardiac Surgery",
+        "latitude": 15.6100,
+        "longitude": 32.5330,
+        "contact": "+249 91 833 1326",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Chinese Friendship Hospital",
+        "arabic_name": "مستشفى الصداقة الصيني",
+        "specialty": "General/Emergency",
+        "latitude": 15.6005,
+        "longitude": 32.5320,
+        "contact": "+249 15 588 0071",
+        "working_hours": "24h"
+    },
+    {
+        "name": "St Mary's Maternity Hospital",
+        "arabic_name": "مستشفى الراهبات للولادة",
+        "specialty": "Maternity/Delivery",
+        "latitude": 15.6040,
+        "longitude": 32.5370,
+        "contact": "+249 18 377 5159",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Al Walidein Charitable Eye Hospital",
+        "arabic_name": "مستشفى الوالدين الخيرى للعيون",
+        "specialty": "Ophthalmology",
+        "latitude": 15.6010,
+        "longitude": 32.5335,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Hospital Rajhi",
+        "arabic_name": "مستشفى الراجحي",
+        "specialty": "General/Emergency",
+        "latitude": 15.5950,
+        "longitude": 32.5250,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Tuga Specialized Hospital",
+        "arabic_name": "مستشفى تقى التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6040,
+        "longitude": 32.5300,
+        "contact": "+249 18 742 0422",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Blue Nile Hospital",
+        "arabic_name": "مستشفى النيل الأزرق",
+        "specialty": "General/Emergency",
+        "latitude": 15.6035,
+        "longitude": 32.5290,
+        "contact": "+249 15 588 7217",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Al Balsam Medical Center",
+        "arabic_name": "مركز البلسم الطبي",
+        "specialty": "General/Medical Center",
+        "latitude": 15.6060,
+        "longitude": 32.5305,
+        "contact": "+249 91 294 3034",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Albuluk Hospital",
+        "arabic_name": "مستشفى البلك للأطفال",
+        "specialty": "Pediatrics",
+        "latitude": 15.5980,
+        "longitude": 32.5260,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Saudi Hospital",
+        "arabic_name": "المستشفى السعودي للولادة",
+        "specialty": "Maternity/Delivery",
+        "latitude": 15.6000,
+        "longitude": 32.5255,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Alamal Alwtani Hospital",
+        "arabic_name": "مستشفى الأمل - أم درمان",
+        "specialty": "General/Emergency",
+        "latitude": 15.6025,
+        "longitude": 32.5290,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Tabarak Children Hospital",
+        "arabic_name": "مستشفى تبارك للأطفال",
+        "specialty": "Pediatrics",
+        "latitude": 15.6050,
+        "longitude": 32.5270,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Tropical Diseases Teaching Hospital",
+        "arabic_name": "مستشفى طب المناطق الحارة",
+        "specialty": "Infectious Diseases",
+        "latitude": 15.6010,
+        "longitude": 32.5295,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Albugaa Specialized Hospital",
+        "arabic_name": "مستشفي البقعة التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6020,
+        "longitude": 32.5280,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Omdurman Teaching Hospital",
+        "arabic_name": "مستشفى أم درمان التعليمي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6000,
+        "longitude": 32.5265,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+      {
+        "name": "Doctors' Hospital",
+        "arabic_name": "مستشفى الأطباء",
+        "specialty": "General/Specialized Clinics",
+        "latitude": 15.6012,
+        "longitude": 32.5345,
+        "contact": "+249 18 347 1973",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Fedail Hospital",
+        "arabic_name": "مستشفى فضيل",
+        "specialty": "General/Specialized Clinics",
+        "latitude": 15.5983,
+        "longitude": 32.5327,
+        "contact": "+249 18 376 6661",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Baraha Medical City",
+        "arabic_name": "مدينة البراحة الطبية",
+        "specialty": "General/Emergency",
+        "latitude": 15.6240,
+        "longitude": 32.5840,
+        "contact": "+249 18 521 2222",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "People's Hospital",
+        "arabic_name": "مستشفى الشعب التعليمي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6030,
+        "longitude": 32.5322,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Al Amal Hospital (Bahri/Kober)",
+        "arabic_name": "مستشفى الأمل - بحري",
+        "specialty": "General/Emergency",
+        "latitude": 15.6210,
+        "longitude": 32.5765,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Al Faisal Specialized Hospital",
+        "arabic_name": "مستشفى الفيصل التخصصي",
+        "specialty": "General/Surgery",
+        "latitude": 15.6010,
+        "longitude": 32.5340,
+        "contact": "+249 15 577 1000",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Jafar Ibn Auf Specialized Hospital for Children",
+        "arabic_name": "مستشفى جعفر ابن عوف التخصصي للأطفال",
+        "specialty": "Pediatrics",
+        "latitude": 15.6015,
+        "longitude": 32.5320,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Dream Specialized Hospital",
+        "arabic_name": "مستشفى دريم التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.6030,
+        "longitude": 32.5330,
+        "contact": "+249 15 566 0612",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Best Care Hospital",
+        "arabic_name": "مستشفى بست كير التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.5990,
+        "longitude": 32.5355,
+        "contact": "+249 11 103 3284",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Qatar Al Nada Hospital",
+        "arabic_name": "مستشفى قطر الندي التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.5780,
+        "longitude": 32.5250,
+        "contact": "+249 91 266 1646",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Libya Specialist Hospital",
+        "arabic_name": "مستشفى ليبيا التخصصي",
+        "specialty": "General/Emergency",
+        "latitude": 15.5810,
+        "longitude": 32.5240,
+        "contact": "Unknown",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Aliaa Specialist Hospital 1",
+        "arabic_name": "مُستشفى علياء التخصصي١",
+        "specialty": "General/Emergency",
+        "latitude": 15.6100,
+        "longitude": 32.5300,
+        "contact": "+249 18 755 2640",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Sahiroon's Hospital",
+        "arabic_name": "مستشفى ساهرون",
+        "specialty": "General/Emergency",
+        "latitude": 15.6012,
+        "longitude": 32.5360,
+        "contact": "+249 18 326 5315",
+        "working_hours": "24h"
+    },
+    {
+        "name": "Ahmed Gasim Hospital (Cardiac Surgery & Kidney Transplant)",
+        "arabic_name": "مستشفى أحمد قاسم - مركز جراحة القلب و زراعة الكلى",
+        "specialty": "Cardiac/Kidney Transplant",
+        "latitude": 15.6220,
+        "longitude": 32.5800,
+        "contact": "+249 90 754 4668",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Bahri Maternity Hospital",
+        "arabic_name": "مستشفى النساء والتوليد - بحري",
+        "specialty": "Maternity/Delivery, Pediatrics",
+        "latitude": 15.6200,
+        "longitude": 32.5800,
+        "contact": "Unknown",
+        "working_hours": "Unknown"
+    },
+    {
+        "name": "Sabbar Hospital",
+        "arabic_name": "مستشفى صبار",
+        "specialty": "General/Emergency",
+        "latitude": 15.6215,
+        "longitude": 32.5820,
+        "contact": "+249 91 237 9766",
+        "working_hours": "24h"
+    }
+]

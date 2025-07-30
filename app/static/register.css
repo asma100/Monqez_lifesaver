@@ -1,0 +1,382 @@
+/* =========================
+   REGISTER PAGE STYLES
+   First Aid Assistant Theme
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body Styles */
+body, html {
+    height: 100%;
+    font-family: 'Cairo', sans-serif;
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    direction: rtl;
+    background-color:#f4f5fa;  
+}
+
+/* Register Container */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Navigation Header - Like Home Page */
+.site-header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 1rem;
+    
+}
+
+.site-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-header .navbar-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-item {
+    color: rgb(0, 0, 0);
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+   
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav-item:hover::before {
+    left: 100%;
+}
+
+.nav-item:hover {
+    background: linear-gradient(135deg, #fa3737, #ed5252);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 52, 212, 0.4);
+    color: white;
+}
+
+/* Register Card */
+.register-card, .content-card {
+    background: rgba(255, 198, 198, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(212, 52, 52, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.register-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #4834d4, #ff4757, #00d2d3, #4834d4);
+    border-radius: 25px;
+    z-index: -1;
+    animation: gradient-rotate 4s linear infinite;
+}
+
+@keyframes gradient-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(212, 52, 52, 0.3);
+    border-radius: 15px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    text-align: right;
+}
+
+.form-control:focus {
+    border-color: #d43434;
+    box-shadow: 0 0 15px rgba(212, 52, 52, 0.3);
+    outline: none;
+    background: rgb(255, 183, 183);
+}
+
+/* Button Styles */
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #d43434, #e06868);
+    color: white;
+    box-shadow: 0 6px 20px rgba(72, 52, 212, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #3742fa, #5352ed);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(72, 52, 212, 0.4);
+}
+
+/* Page Title */
+.page-title {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Links */
+.text-link {
+    color: #4834d4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: #3742fa;
+    text-decoration: underline;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.alert-success {
+    background: rgba(46, 204, 113, 0.9);
+    color: white;
+    border: 2px solid #2ecc71;
+}
+
+.alert-danger {
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+    border: 2px solid #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-card, .content-card {
+        padding: 2rem;
+        margin: 1rem;
+        margin-top: 120px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .site-header {
+        padding: 0.5rem 1rem;
+    }
+    
+    .site-header .navbar-nav {
+        gap: 1rem;
+    }
+    
+    .nav-item {
+        font-size: 1rem;
+    }
+}
+
+/* ...existing code... */
+
+
+
+
+/* Background image */
+.background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Puts the image behind the content */
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Container for the login form */
+.container1 {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure it's on top of the background */
+    text-align: center;
+    
+}
+
+.container1 h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: hsl(0, 83%, 32%);
+}
+
+/* Form inputs */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Form label styling */
+.form-control-label {
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    color:#fd0000;
+}
+
+/* Remember checkbox */
+.form-check-label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Submit button */
+button[type="submit"] {
+    width: 100%;
+    background-color:#fd0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Login link styling */
+.container1 p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.container1 p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.container1 p a:hover {
+    color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container1 {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .site-header {
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التطوع كطبيب</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='volunteer.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imags/icon.png') }}" type="image/x-icon">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-nav" id="navbarNav">
+                <a class="nav-item" href="{{ url_for('home') }}">الرئيسية</a>
+                <a class="nav-item" href="{{ url_for('chat') }}">محادثة جديدة</a>
+                <a class="nav-item" href="{{ url_for('about') }}">عن الصفحة</a>
+                {% if current_user.is_authenticated %}
+                    <a class="nav-item" href="{{ url_for('volunteer') }}">تطوع</a>
+                    <a class="nav-item" href="{{ url_for('history') }}">سجل المحادثات</a>
+                    <a class="nav-item" href="{{ url_for('logout') }}">تسجيل خروج</a>
+                {% else %}
+                    <a class="nav-item" href="{{ url_for('login') }}">تسجيل دخول</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <div class="volunteer-header">
+        <h1>انضم كطبيب متطوع</h1>
+        <p>لو كنت طبيب وعايز تساعد، شارك أوقات تفرغك ومعلومات الاتصال بيك. الرجاء إدخال رقم العمل فقط لتفادي الإزعاج.</p>
+    </div>
+    
+    <form class="volunteer-form" method="POST">
+        {{ form.hidden_tag() }}
+        <div>{{ form.name.label }} {{ form.name() }}</div>
+        <div>{{ form.phone_number.label }} {{ form.phone_number() }}</div>
+        <div class="form-group">
+  <label>{{ form.available_days.label }}</label>
+  <div class="checkbox-group">
+    {% for value, label in form.available_days.choices %}
+      <label class="checkbox-btn">
+        <input type="checkbox" name="{{ form.available_days.name }}" value="{{ value }}"
+               {% if value in form.available_days.data %}checked{% endif %}>
+        <span>{{ label }}</span>
+      </label>
+    {% endfor %}
+  </div>
+</div>
+        <div>{{ form.available_times.label }} {{ form.available_times() }}</div>
+        <div>{{ form.specialty.label }} {{ form.specialty() }}</div>
+        <div class="btn-submit">{{ form.submit() }}</div>
+    </form>
+
+    <form class="volunteer-form2" method="POST" action="{{ url_for('delete_volunteer') }}">
+        <div>
+            <button type="submit" class="btn btn-danger">حذف بياناتي كمتطوع</button>
+        </div>
+    </form>
+
+    <div class="background-image-container">
+        <img src="static/imags/woman.png" alt="Background Image" class="background-image2">
+    </div>
+    <div class="background-image-container">
+        <img src="static/imags/man.png" alt="Background Image" class="background-image">
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const navbarNav = document.getElementById("navbarNav");
+
+        if (hamburger && navbarNav) {
+            hamburger.addEventListener("click", function () {
+                navbarNav.classList.toggle("show");
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
