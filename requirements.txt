@@ -31,7 +31,8 @@ huggingface-hub==0.33.2
 sentence-transformers==5.0.0
 transformers==4.53.1
 tokenizers==0.21.2
-torch==2.0.1 
+torch==2.5.0  
+ 
 
 # PDF Processing
 pypdf==5.7.0
