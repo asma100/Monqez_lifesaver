@@ -15,14 +15,16 @@ load_dotenv()
 genai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
 
 
-path = os.path.join(os.path.dirname(__file__), "pdfs", "first_aid_notes_2019.pdf")
+#  path to the PDF
+pdf_path = os.path.join(os.path.dirname(__file__), "pdfs", "first_aid_notes_2019.pdf")
 
-# Load all PDF documents
-all_documents = []
-for path in path:
-    loader = PyPDFLoader(path)
-    documents = loader.load()
-    all_documents.extend(documents)
+# Load and split documents
+loader = PyPDFLoader(pdf_path)
+documents = loader.load()
+
+# All documents list
+all_documents = documents
+
 
 # Split the text into chunks
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=50)
