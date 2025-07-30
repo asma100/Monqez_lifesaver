@@ -15,12 +15,11 @@ load_dotenv()
 genai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
 
 
-pdf_paths = [r"D:\vs\first aid assistants smart chatbot\app\pdfs\first_aid_notes_2019.pdf",
-             r"D:\vs\first aid assistants smart chatbot\app\pdfs\First-Aid.pdf"]
+path = os.path.join(os.path.dirname(__file__), "pdfs", "first_aid_notes_2019.pdf")
 
 # Load all PDF documents
 all_documents = []
-for path in pdf_paths:
+for path in path:
     loader = PyPDFLoader(path)
     documents = loader.load()
     all_documents.extend(documents)
