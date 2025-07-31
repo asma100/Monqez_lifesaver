@@ -130,9 +130,8 @@ def chat():
     answer = None
     user_coords = session.get('user_coords')
     
-    # Start new conversation session when visiting chat page
-    if 'chat_session_id' not in session:
-        session['chat_session_id'] = str(uuid.uuid4())
+    # Always create a new conversation session when visiting chat page
+    session['chat_session_id'] = str(uuid.uuid4())
     
     print(user_coords)  # ← Get user location
 
@@ -143,30 +142,20 @@ def chat():
 
     return render_template('chatbot.html', query=query, answer=answer)
 
-@app.route('/new_chat')
-def new_chat():
-    """Start a new conversation session"""
-    session['chat_session_id'] = str(uuid.uuid4())
-    return redirect(url_for('chat'))
-
 @app.route('/history')
 @login_required
 def history():
-    # Group chats by session_id and order by timestamp
-    chats = ChatHistory.query.filter_by(user_id=current_user.id).order_by(ChatHistory.session_id, ChatHistory.timestamp).all()
+    # Get all chat history for current user
+    chats = ChatHistory.query.filter_by(user_id=current_user.id).order_by(ChatHistory.timestamp.desc()).all()
     
     # Group conversations by session_id
     conversations = {}
     for chat in chats:
-        if hasattr(chat, 'session_id'):
-            if chat.session_id not in conversations:
-                conversations[chat.session_id] = []
-            conversations[chat.session_id].append(chat)
-        else:
-            # Handle old format (before session_id was added)
-            if 'legacy' not in conversations:
-                conversations['legacy'] = []
-            conversations['legacy'].append(chat)
+        session_key = chat.session_id
+        
+        if session_key not in conversations:
+            conversations[session_key] = []
+        conversations[session_key].append(chat)
     
     return render_template("history.html", conversations=conversations)
 

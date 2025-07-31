@@ -43,7 +43,7 @@ class Volunteer(db.Model):
 class ChatHistory(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('User.id'), nullable=False)
-    session_id = db.Column(db.String(50), nullable=False)  # Group conversations
+    session_id = db.Column(db.String(50), nullable=False)
     content = db.Column(db.Text, nullable=False)
     message_type = db.Column(db.String(10), nullable=False)  # 'user' or 'bot'
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
@@ -51,7 +51,7 @@ class ChatHistory(db.Model):
     user = db.relationship('User', backref='chat_history')
 
     def __repr__(self):
-        return f"<ChatHistory {self.user_id} - {self.session_id} - {self.message_type}>"
+        return f"<ChatHistory {self.user_id} - {self.session_id or 'legacy'} - {self.message_type or 'combined'}>"
 
 
 
