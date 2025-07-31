@@ -2,7 +2,7 @@ services:
   - type: web
     name: monqez-lifesaver
     env: python
-    buildCommand: pip install -r requirements.txt && python -c "from app import app, db; app.app_context().push(); db.create_all(); print('Database initialized!')"
+    buildCommand: pip install -r requirements.txt
     startCommand: gunicorn run:app
     envVars:
       - key: FLASK_ENV
