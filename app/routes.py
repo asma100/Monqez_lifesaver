@@ -297,8 +297,7 @@ from datetime import datetime
 import uuid
 
 @app.route('/get_response', methods=['POST'])
-@login_required
-def get_response():
+def get_response():  # Removed @login_required to allow unregistered users
     data = request.get_json()
     query = data.get('query')
     if query:
@@ -311,24 +310,27 @@ def get_response():
         user_coords = session.get('user_coords')
         answer = ask_question(query, user_coords=user_coords)
 
-        # Save user message
-        user_chat = ChatHistory(
-            user_id=current_user.id,
-            session_id=session_id,
-            content=query,
-            message_type='user'
-        )
-        db.session.add(user_chat)
-        
-        # Save bot response
-        bot_chat = ChatHistory(
-            user_id=current_user.id,
-            session_id=session_id,
-            content=answer,
-            message_type='bot'
-        )
-        db.session.add(bot_chat)
-        db.session.commit()
+        # Save to database only if user is logged in
+        if current_user.is_authenticated:
+            # Save user message
+            user_chat = ChatHistory(
+                user_id=current_user.id,
+                session_id=session_id,
+                content=query,
+                message_type='user'
+            )
+            db.session.add(user_chat)
+            
+            # Save bot response
+            bot_chat = ChatHistory(
+                user_id=current_user.id,
+                session_id=session_id,
+                content=answer,
+                message_type='bot'
+            )
+            db.session.add(bot_chat)
+            db.session.commit()
+        # If user is not logged in, just return the response without saving
 
         return jsonify({'response': answer})
     return jsonify({'response': 'No query provided.'})
