@@ -25,20 +25,118 @@ TELEGRAM_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
 
 @app.route('/telegram_webhook', methods=['POST'])
 def telegram_webhook():
-    data = request.get_json()
-    if "message" in data:
-        chat_id = data['message']['chat']['id']
-        text = data['message'].get('text', '')
+    try:
+        data = request.get_json()
+        
+        if "message" in data:
+            chat_id = data['message']['chat']['id']
+            user_name = data['message']['from'].get('first_name', 'User')
+            text = data['message'].get('text', '')
+            
+            print(f"[📱] Telegram message from {user_name}: {text}")
+            
+            # Handle commands
+            if text.startswith('/start'):
+                welcome_msg = f"""مرحباً {user_name}! 🏥
 
-        # Your Gemini assistant logic here
-        response = ask_question(text)  # This can be your Gemini function
+أنا مساعد طبي ذكي من منصة منقذ الحياة.
+يمكنني مساعدتك في:
+• الإسعافات الأولية
+• معلومات المستشفيات القريبة
+• نصائح طبية عامة
 
-        requests.post(TELEGRAM_URL, json={
-            "chat_id": chat_id,
-            "text": response
+أرسل لي أي سؤال طبي وسأساعدك! 🩺"""
+                
+                requests.post(TELEGRAM_URL, json={
+                    "chat_id": chat_id,
+                    "text": welcome_msg
+                })
+                
+            elif text.startswith('/help'):
+                help_msg = """كيفية الاستخدام:
+
+📝 اكتب أي سؤال طبي مثل:
+• "عندي صداع"
+• "كيف أعالج الحروق؟"
+• "أين أقرب مستشفى؟"
+
+🆘 في حالات الطوارئ:
+اتصل بـ 999 فوراً
+
+🌐 للمزيد من الخدمات:
+زر موقعنا على الإنترنت"""
+                
+                requests.post(TELEGRAM_URL, json={
+                    "chat_id": chat_id,
+                    "text": help_msg
+                })
+                
+            else:
+                # Process medical question
+                # No user coordinates for Telegram (they don't share location automatically)
+                response = ask_question(text, user_coords=None)
+                
+                # Split long messages (Telegram has 4096 character limit)
+                if len(response) > 4000:
+                    # Send in chunks
+                    chunks = [response[i:i+4000] for i in range(0, len(response), 4000)]
+                    for chunk in chunks:
+                        requests.post(TELEGRAM_URL, json={
+                            "chat_id": chat_id,
+                            "text": chunk
+                        })
+                else:
+                    requests.post(TELEGRAM_URL, json={
+                        "chat_id": chat_id,
+                        "text": response
+                    })
+        
+        return jsonify({'status': 'ok'})
+        
+    except Exception as e:
+        print(f"[❌] Telegram webhook error: {str(e)}")
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+@app.route('/telegram_status')
+def telegram_status():
+    """Check Telegram bot configuration"""
+    token = os.environ.get('TELEGRAM_TOKEN')
+    
+    if not token or token == 'your-telegram-bot-token-here':
+        return jsonify({
+            'status': 'error',
+            'message': 'Telegram token not configured'
         })
-
-    return jsonify({'status': 'ok'})
+    
+    try:
+        # Test bot token
+        response = requests.get(f"https://api.telegram.org/bot{token}/getMe")
+        
+        if response.status_code == 200:
+            bot_info = response.json()
+            if bot_info['ok']:
+                return jsonify({
+                    'status': 'success',
+                    'bot_name': bot_info['result']['first_name'],
+                    'bot_username': bot_info['result']['username'],
+                    'webhook_url': f"{request.host_url}telegram_webhook"
+                })
+            else:
+                return jsonify({
+                    'status': 'error',
+                    'message': 'Invalid bot token'
+                })
+        else:
+            return jsonify({
+                'status': 'error',
+                'message': f'HTTP error: {response.status_code}'
+            })
+            
+    except Exception as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        })
 
 @app.route("/home", methods=['GET', 'POST'])
 def home():
