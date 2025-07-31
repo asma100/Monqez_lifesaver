@@ -8,7 +8,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configure Gemini API using environment variable
-genai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
+api_key = os.environ.get('GEMINI_API_KEY')
+if api_key and api_key != 'your-gemini-api-key-here':
+    genai.configure(api_key=api_key)
+    print("✅ Gemini API configured successfully")
+else:
+    print("❌ Gemini API key not found or invalid")
 
 # Conversation history to store previous exchanges
 conversation_history = []
@@ -37,6 +42,35 @@ def format_volunteers_for_prompt(volunteers):
             f"   ⏰ Time: {v.available_times} on {v.available_days}\n"
         )
     return "\n".join(formatted)
+
+# Fallback response when API fails
+def get_fallback_response(query, user_coords=None):
+    """Provide basic first aid guidance when Gemini API is unavailable"""
+    
+    # Get hospital and volunteer info
+    hospitals = get_top_7_hospitals(user_coords) if user_coords else []
+    volunteers = get_all_available_volunteers()
+    
+    hospital_text = format_hospitals_for_prompt(hospitals) if hospitals else "لا تتوفر معلومات المستشفيات حالياً."
+    volunteer_text = format_volunteers_for_prompt(volunteers) if volunteers else "لا يوجد أطباء متطوعون متاحون حالياً."
+    
+    response = f"""عذراً، الخدمة الذكية غير متاحة حالياً. إليك المعلومات الأساسية:
+
+🏥 أقرب المستشفيات:
+{hospital_text}
+
+👨‍⚕️ الأطباء المتطوعون المتاحون:
+{volunteer_text}
+
+⚠️ في حالات الطوارئ الطبية:
+- اتصل بالطوارئ فوراً: 999
+- لا تتردد في طلب المساعدة
+- حافظ على الهدوء
+- إذا كان الشخص فاقداً للوعي، تأكد من وضعه في وضع الإفاقة
+
+يرجى المحاولة مرة أخرى لاحقاً للحصول على المساعدة الذكية."""
+    
+    return response
 
 # Simplified prompt without RAG/PDF reference
 def make_prompt(query, history, user_coords=None):
@@ -86,23 +120,49 @@ def make_prompt(query, history, user_coords=None):
 
 # Function to generate a response using Gemini
 def generate_response(user_prompt):
-    model = genai.GenerativeModel('gemini-2.5-pro')
-    answer = model.generate_content(user_prompt)
-    return answer.text
+    try:
+        # Check if API key is configured
+        api_key = os.environ.get('GEMINI_API_KEY')
+        if not api_key or api_key == 'your-gemini-api-key-here':
+            return None  # Return None to trigger fallback
+        
+        # Limit prompt length to avoid issues
+        if len(user_prompt) > 10000:
+            user_prompt = user_prompt[:10000] + "..."
+            
+        model = genai.GenerativeModel('gemini-1.5-pro')  # Use more stable version
+        response = model.generate_content(user_prompt)
+        
+        if response and response.text:
+            return response.text
+        else:
+            return None  # Trigger fallback
+            
+    except Exception as e:
+        print(f"Gemini API Error: {str(e)}")
+        return None  # Trigger fallback
 
 # Main function to ask a question and store the answer in history (No RAG)
 def ask_question(query, user_coords=None):
-    # Create prompt without RAG/PDF content
-    prompt = make_prompt(
-        query,
-        history=conversation_history,
-        user_coords=user_coords
-    )
+    try:
+        # Try to get Gemini response first
+        prompt = make_prompt(
+            query,
+            history=conversation_history,
+            user_coords=user_coords
+        )
 
-    answer = generate_response(prompt)
+        answer = generate_response(prompt)
+        
+        # If Gemini fails, use fallback
+        if answer is None:
+            answer = get_fallback_response(query, user_coords)
 
-    conversation_history.append({'question': query, 'answer': answer})
-    if len(conversation_history) > 5:
-        conversation_history.pop(0)
+        conversation_history.append({'question': query, 'answer': answer})
+        if len(conversation_history) > 5:
+            conversation_history.pop(0)
 
-    return answer
+        return answer
+    except Exception as e:
+        print(f"Ask question error: {str(e)}")
+        return get_fallback_response(query, user_coords)
