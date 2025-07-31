@@ -243,8 +243,8 @@ def chat():
 @app.route('/history')
 @login_required
 def history():
-    # Get all chat history for current user
-    chats = ChatHistory.query.filter_by(user_id=current_user.id).order_by(ChatHistory.timestamp.desc()).all()
+    # Get all chat history for current user, ordered by timestamp
+    chats = ChatHistory.query.filter_by(user_id=current_user.id).order_by(ChatHistory.timestamp).all()
     
     # Group conversations by session_id
     conversations = {}
@@ -255,7 +255,24 @@ def history():
             conversations[session_key] = []
         conversations[session_key].append(chat)
     
-    return render_template("history.html", conversations=conversations)
+    # Sort sessions by the timestamp of their first message (newest sessions first)
+    sorted_conversations = {}
+    session_times = {}
+    
+    # Get the earliest timestamp for each session
+    for session_id, messages in conversations.items():
+        session_times[session_id] = min(msg.timestamp for msg in messages)
+    
+    # Sort sessions by their start time (newest first)
+    sorted_session_ids = sorted(session_times.keys(), 
+                              key=lambda x: session_times[x], 
+                              reverse=True)
+    
+    # Build sorted conversations dict
+    for session_id in sorted_session_ids:
+        sorted_conversations[session_id] = conversations[session_id]
+    
+    return render_template("history.html", conversations=sorted_conversations)
 
 
 @app.route('/delete_chat/<int:chat_id>', methods=['POST'])
