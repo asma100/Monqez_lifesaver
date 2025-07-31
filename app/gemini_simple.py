@@ -2,6 +2,7 @@ import google.generativeai as genai
 from app.loction import get_top_7_hospitals
 from app.volunteer_utils import get_all_available_volunteers
 import os
+import time
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -17,6 +18,10 @@ else:
 
 # Conversation history to store previous exchanges
 conversation_history = []
+
+# Simple rate limiting
+last_api_call = 0
+MIN_DELAY = 2  # Minimum 2 seconds between API calls
 
 def format_hospitals_for_prompt(hospitals):
     result = []
@@ -54,8 +59,21 @@ def get_fallback_response(query, user_coords=None):
     hospital_text = format_hospitals_for_prompt(hospitals) if hospitals else "لا تتوفر معلومات المستشفيات حالياً."
     volunteer_text = format_volunteers_for_prompt(volunteers) if volunteers else "لا يوجد أطباء متطوعون متاحون حالياً."
     
-    response = f"""عذراً، الخدمة الذكية غير متاحة حالياً. إليك المعلومات الأساسية:
-
+    # Basic keyword matching for common emergencies
+    query_lower = query.lower()
+    emergency_advice = ""
+    
+    if any(word in query_lower for word in ['نزيف', 'دم', 'bleeding', 'blood']):
+        emergency_advice = "\n💡 نصيحة فورية للنزيف:\n- اضغط مباشرة على الجرح بقطعة قماش نظيفة\n- ارفع المنطقة المصابة فوق مستوى القلب إن أمكن\n- لا تزيل القماش، أضف طبقات إضافية\n"
+    elif any(word in query_lower for word in ['حرق', 'حروق', 'burn', 'burns']):
+        emergency_advice = "\n💡 نصيحة فورية للحروق:\n- ضع المنطقة تحت الماء البارد لمدة 20 دقيقة\n- لا تستخدم الثلج أو الزبدة\n- غطي بقطعة قماش نظيفة\n"
+    elif any(word in query_lower for word in ['كسر', 'fracture', 'broken']):
+        emergency_advice = "\n💡 نصيحة فورية للكسور:\n- لا تحرك المصاب إلا عند الضرورة\n- ثبت المنطقة المصابة\n- ضع كمادات باردة\n"
+    elif any(word in query_lower for word in ['اختناق', 'choking', 'گح']):
+        emergency_advice = "\n💡 نصيحة فورية للاختناق:\n- اطلب من الشخص السعال بقوة\n- اضرب بين لوحي الكتف 5 مرات\n- إذا لم ينجح، استخدم مناورة هايمليك\n"
+    
+    response = f"""الخدمة الذكية مؤقتاً غير متاحة (تم تجاوز حد الاستخدام اليومي).
+{emergency_advice}
 🏥 أقرب المستشفيات:
 {hospital_text}
 
@@ -66,9 +84,8 @@ def get_fallback_response(query, user_coords=None):
 - اتصل بالطوارئ فوراً: 999
 - لا تتردد في طلب المساعدة
 - حافظ على الهدوء
-- إذا كان الشخص فاقداً للوعي، تأكد من وضعه في وضع الإفاقة
 
-يرجى المحاولة مرة أخرى لاحقاً للحصول على المساعدة الذكية."""
+ستعود الخدمة الذكية غداً أو يمكنك ترقية الحساب للمزيد من الاستخدام."""
     
     return response
 
@@ -120,18 +137,28 @@ def make_prompt(query, history, user_coords=None):
 
 # Function to generate a response using Gemini
 def generate_response(user_prompt):
+    global last_api_call
+    
     try:
         # Check if API key is configured
         api_key = os.environ.get('GEMINI_API_KEY')
         if not api_key or api_key == 'your-gemini-api-key-here':
             return None  # Return None to trigger fallback
         
-        # Limit prompt length to avoid issues
-        if len(user_prompt) > 10000:
-            user_prompt = user_prompt[:10000] + "..."
+        # Rate limiting - ensure minimum delay between calls
+        current_time = time.time()
+        time_since_last = current_time - last_api_call
+        if time_since_last < MIN_DELAY:
+            time.sleep(MIN_DELAY - time_since_last)
+        
+        # Limit prompt length to avoid token limits
+        if len(user_prompt) > 8000:  # Reduced from 10000
+            user_prompt = user_prompt[:8000] + "..."
             
-        model = genai.GenerativeModel('gemini-1.5-pro')  # Use more stable version
+        model = genai.GenerativeModel('gemini-1.5-flash')  # Higher free tier limits
         response = model.generate_content(user_prompt)
+        
+        last_api_call = time.time()  # Update last call time
         
         if response and response.text:
             return response.text
@@ -140,6 +167,8 @@ def generate_response(user_prompt):
             
     except Exception as e:
         print(f"Gemini API Error: {str(e)}")
+        if "429" in str(e) or "quota" in str(e).lower():
+            print("⚠️ API quota exceeded - using fallback response")
         return None  # Trigger fallback
 
 # Main function to ask a question and store the answer in history (No RAG)
