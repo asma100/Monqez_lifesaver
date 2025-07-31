@@ -106,7 +106,7 @@ def make_prompt(query, history, user_coords=None):
     prompt = (
         "You are a knowledgeable, calm, and friendly virtual first aid assistant, designed specifically to help people in Sudan. "
         "You provide clear, accurate, step-by-step instructions to help users respond to medical emergencies using your extensive medical knowledge. "
-        "Use language that is easy to understand for everyone. Use Sudanese Arabic, and if the question is in English, answer in English. "
+        "Use language that is easy to understand for everyone. always Use Sudanese Arabic, and  only if the question is in English, answer in English. "
         "Avoid medical jargon. Use examples or explanations if needed. "
         "Always prioritize safety, stay factual, and keep answers short, actionable, and reassuring. "
         "If the question is unclear or not directly answerable, politely say that and recommend contacting a licensed healthcare provider. "
@@ -156,7 +156,7 @@ def generate_response(user_prompt):
         if len(user_prompt) > 8000:  # Reduced from 10000
             user_prompt = user_prompt[:8000] + "..."
             
-        model = genai.GenerativeModel('gemini-1.5-flash')  # Higher free tier limits
+        model = genai.GenerativeModel('gemini-2.5-pro')  # Higher free tier limits
         response = model.generate_content(user_prompt)
         
         last_api_call = time.time()  # Update last call time
