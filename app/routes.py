@@ -288,23 +288,14 @@ def chat():
     
     # Always create a new conversation session when visiting chat page
     session['chat_session_id'] = str(uuid.uuid4())
-    
-    print(f"[💬] New chat session created: {session['chat_session_id']}")
-    print(f"[📍] User location: {user_coords}")
 
     return render_template('chatbot.html')
 
 @app.route('/history')
 @login_required
 def history():
-    print(f"[📜] History requested for user {current_user.id}")
-    
     # Get all chat history for current user, ordered by timestamp
     chats = ChatHistory.query.filter_by(user_id=current_user.id).order_by(ChatHistory.timestamp).all()
-    
-    print(f"[📜] Found {len(chats)} chat records")
-    for chat in chats[:5]:  # Show first 5 for debugging
-        print(f"[📜] Chat: {chat.session_id} - {chat.message_type} - {chat.content[:50]}...")
     
     # Group conversations by session_id
     conversations = {}
@@ -314,8 +305,6 @@ def history():
         if session_key not in conversations:
             conversations[session_key] = []
         conversations[session_key].append(chat)
-    
-    print(f"[📜] Grouped into {len(conversations)} conversations")
     
     # Sort sessions by the timestamp of their first message (newest sessions first)
     sorted_conversations = {}
@@ -363,11 +352,6 @@ def get_response():  # Removed @login_required to allow unregistered users
     data = request.get_json()
     query = data.get('query')
     
-    print(f"[🔍] get_response called with query: {query}")
-    print(f"[🔍] User authenticated: {current_user.is_authenticated}")
-    if current_user.is_authenticated:
-        print(f"[🔍] User ID: {current_user.id}")
-    
     if query:
         # Get or create session ID for this conversation
         session_id = session.get('chat_session_id')
@@ -375,15 +359,11 @@ def get_response():  # Removed @login_required to allow unregistered users
             session_id = str(uuid.uuid4())
             session['chat_session_id'] = session_id
         
-        print(f"[🔍] Session ID: {session_id}")
-        
         user_coords = session.get('user_coords')
         answer = ask_question(query, user_coords=user_coords)
 
         # Save to database only if user is logged in
         if current_user.is_authenticated:
-            print(f"[💾] Saving to database for user {current_user.id}")
-            
             # Save user message
             user_chat = ChatHistory(
                 user_id=current_user.id,
@@ -404,12 +384,9 @@ def get_response():  # Removed @login_required to allow unregistered users
             
             try:
                 db.session.commit()
-                print(f"[✅] Successfully saved chat to database")
             except Exception as e:
                 print(f"[❌] Database save error: {str(e)}")
                 db.session.rollback()
-        else:
-            print(f"[ℹ️] User not authenticated - not saving to database")
 
         return jsonify({'response': answer})
     return jsonify({'response': 'No query provided.'})

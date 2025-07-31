@@ -36,19 +36,41 @@
 </div>
 
 <div class="history-container">
-    {% for chat in chats %}
-    <div class="chat-entry">
-        <button class="collapse-toggle">
-            محادثة بتاريخ {{ chat.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
-        </button>
-        <div class="chat-content">
-            <p>{{ chat.content.replace('\n', '<br>') | safe }}</p>
-            <form action="{{ url_for('delete_chat', chat_id=chat.id) }}" method="post">
-                <button class="delete-button" type="submit">🗑 حذف</button>
-            </form>
+    {% if conversations %}
+        {% for session_id, messages in conversations.items() %}
+        <div class="chat-entry">
+            <button class="collapse-toggle">
+                محادثة بتاريخ {{ messages[0].timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
+                ({{ messages|length }} رسالة)
+            </button>
+            <div class="chat-content">
+                {% for message in messages %}
+                    <div class="message {{ message.message_type }}">
+                        <strong>
+                            {% if message.message_type == 'user' %}
+                                أنت:
+                            {% else %}
+                                المساعد الطبي:
+                            {% endif %}
+                        </strong>
+                        <p>{{ message.content.replace('\n', '<br>') | safe }}</p>
+                        <small>{{ message.timestamp.strftime('%H:%M:%S') }}</small>
+                    </div>
+                {% endfor %}
+                
+                <!-- Delete entire conversation -->
+                <form action="{{ url_for('delete_chat', chat_id=messages[0].id) }}" method="post">
+                    <button class="delete-button" type="submit">🗑 حذف المحادثة</button>
+                </form>
+            </div>
         </div>
-    </div>
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <div class="no-history">
+            <p>لا توجد محادثات محفوظة بعد</p>
+            <a href="{{ url_for('chat') }}" class="start-chat-btn">ابدأ محادثة جديدة</a>
+        </div>
+    {% endif %}
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
