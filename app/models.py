@@ -54,4 +54,17 @@ class ChatHistory(db.Model):
         return f"<ChatHistory {self.user_id} - {self.session_id or 'legacy'} - {self.message_type or 'combined'}>"
 
 
+class TelegramChatHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    telegram_chat_id = db.Column(db.String(50), nullable=False)  # Telegram chat ID
+    telegram_user_name = db.Column(db.String(100), nullable=True)  # User's first name
+    session_id = db.Column(db.String(50), nullable=False)  # Conversation session
+    content = db.Column(db.Text, nullable=False)
+    message_type = db.Column(db.String(10), nullable=False)  # 'user' or 'bot'
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f"<TelegramChat {self.telegram_chat_id} - {self.message_type}>"
+
+
 
