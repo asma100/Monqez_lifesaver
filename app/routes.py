@@ -98,12 +98,17 @@ def volunteer():
         flash("تم حفظ بيانات التطوع بنجاح!", "success")
         return redirect(url_for("volunteer"))
 
+    # Pre-populate form with existing data
     if existing:
         form.name.data = existing.name
         form.phone_number.data = existing.phone_number
-        form.available_days.data = existing.available_days.split(',')  
+        form.available_days.data = existing.available_days.split(',') if existing.available_days else []
         form.available_times.data = existing.available_times
         form.specialty.data = existing.specialty
+    else:
+        # Initialize with empty list to prevent None error
+        if form.available_days.data is None:
+            form.available_days.data = []
 
     return render_template("volunteer.html", form=form, volunteer=existing)
 

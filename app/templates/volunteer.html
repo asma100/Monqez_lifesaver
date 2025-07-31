@@ -46,7 +46,7 @@
     {% for value, label in form.available_days.choices %}
       <label class="checkbox-btn">
         <input type="checkbox" name="{{ form.available_days.name }}" value="{{ value }}"
-               {% if value in form.available_days.data %}checked{% endif %}>
+               {% if form.available_days.data and value in form.available_days.data %}checked{% endif %}>
         <span>{{ label }}</span>
       </label>
     {% endfor %}
