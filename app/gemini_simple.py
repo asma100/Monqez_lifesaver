@@ -116,10 +116,11 @@ def make_prompt(query, history, user_coords=None):
         f"Here are the 7 closest hospitals:\n{hospital_info_text}\n\n"
         "From the list above, choose the most relevant hospital based on the emergency. "
         "If more than one hospital is suitable, pick the closest. Mention which one and explain why.\n\n"
+        "if the user out of the country, tell them that you are not able to help them because they are not in Sudan and they should contact the nearest hospital.\n\n"
 
         f"Volunteer doctors currently available:\n{volunteers_info}\n"
         "From the list above, choose the most relevant volunteer doctor based on the emergency. "
-        "If there is no doctor that is directly relevant, suggest partially relevant ones.\n\n"
+        "If there is no doctor that is directly relevant, suggest partially relevant ones.and if no partially relevant doctors are available give them the doctor that available\n\n"
 
         f"Conversation History:\n{history_text}\n\n"
         "If there is conversation history, use it to understand the context of the user's question and continue the conversation from where you left off.\n\n"

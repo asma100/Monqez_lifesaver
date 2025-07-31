@@ -173,35 +173,6 @@ body, html {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.message {
-    background-color: #f8f9fa;
-    padding: 0.8rem;
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
-    border-left: 3px solid #ff3838;
-}
-
-.message:last-child {
-    margin-bottom: 1rem;
-}
-
-.message p {
-    margin-bottom: 0.3rem;
-    line-height: 1.5;
-}
-
-.message small {
-    color: #666;
-    font-size: 0.8rem;
-}
-
-.no-history {
-    text-align: center;
-    padding: 2rem;
-    color: #666;
-    font-style: italic;
-}
-
 
 /* Responsive */
 @media (max-width: 768px) {

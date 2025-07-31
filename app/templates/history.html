@@ -36,52 +36,19 @@
 </div>
 
 <div class="history-container">
-    {% if conversations %}
-        <!-- New format: Sessions with messages -->
-        {% for session_id, session_chats in conversations.items() %}
-        <div class="chat-entry">
-            <button class="collapse-toggle">
-                {% if session_id == 'legacy' %}
-                    محادثات قديمة
-                {% else %}
-                    جلسة محادثة - {{ session_chats[0].timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
-                {% endif %}
-            </button>
-            <div class="chat-content">
-                {% for chat in session_chats %}
-                    <div class="message">
-                        <p><strong>{{ chat.message_type|title }}:</strong> {{ chat.content.replace('\n', '<br>') | safe }}</p>
-                        <small>{{ chat.timestamp.strftime('%H:%M:%S') }}</small>
-                    </div>
-                {% endfor %}
-                <form action="{{ url_for('delete_chat', chat_id=session_chats[0].id) }}" method="post">
-                    <button class="delete-button" type="submit">🗑 حذف الجلسة</button>
-                </form>
-            </div>
+    {% for chat in chats %}
+    <div class="chat-entry">
+        <button class="collapse-toggle">
+            محادثة بتاريخ {{ chat.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
+        </button>
+        <div class="chat-content">
+            <p>{{ chat.content.replace('\n', '<br>') | safe }}</p>
+            <form action="{{ url_for('delete_chat', chat_id=chat.id) }}" method="post">
+                <button class="delete-button" type="submit">🗑 حذف</button>
+            </form>
         </div>
-        {% endfor %}
-    {% else %}
-        <!-- Old format: Individual chats -->
-        {% for chat in chats %}
-        <div class="chat-entry">
-            <button class="collapse-toggle">
-                محادثة بتاريخ {{ chat.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
-            </button>
-            <div class="chat-content">
-                <p>{{ chat.content.replace('\n', '<br>') | safe }}</p>
-                <form action="{{ url_for('delete_chat', chat_id=chat.id) }}" method="post">
-                    <button class="delete-button" type="submit">🗑 حذف</button>
-                </form>
-            </div>
-        </div>
-        {% endfor %}
-    {% endif %}
-    
-    {% if not conversations and not chats %}
-        <div class="no-history">
-            <p>لا توجد محادثات محفوظة حتى الآن</p>
-        </div>
-    {% endif %}
+    </div>
+    {% endfor %}
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", () => {

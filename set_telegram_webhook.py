@@ -12,7 +12,7 @@ load_dotenv()
 
 # Configuration
 TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
-RENDER_URL = "https://your-app-name.onrender.com"  # Replace with your Render URL
+RENDER_URL = "https://monqez-lifesaver.onrender.com"  # Replace with your Render URL
 WEBHOOK_URL = f"{RENDER_URL}/telegram_webhook"
 
 def set_webhook():
