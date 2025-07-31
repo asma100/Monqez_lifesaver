@@ -33,7 +33,31 @@ def telegram_webhook():
             user_name = data['message']['from'].get('first_name', 'User')
             text = data['message'].get('text', '')
             
-            print(f"[📱] Telegram message from {user_name}: {text}")
+            # Check if user sent location
+            location = data['message'].get('location')
+            user_coords = None
+            
+            if location:
+                # User shared their location
+                lat = location['latitude']
+                lon = location['longitude']
+                user_coords = (lat, lon)
+                print(f"[📍] Telegram user {user_name} shared location: {lat}, {lon}")
+                
+                # Acknowledge location received
+                location_msg = f"""تم استلام موقعك بنجاح! �
+الإحداثيات: {lat:.4f}, {lon:.4f}
+
+الآن يمكنني أن أعطيك معلومات دقيقة عن أقرب المستشفيات إليك.
+أرسل لي سؤالك الطبي وسأساعدك! 🏥"""
+                
+                requests.post(TELEGRAM_URL, json={
+                    "chat_id": chat_id,
+                    "text": location_msg
+                })
+                return jsonify({'status': 'ok'})
+            
+            print(f"[�📱] Telegram message from {user_name}: {text}")
             
             # Handle commands
             if text.startswith('/start'):
@@ -45,11 +69,22 @@ def telegram_webhook():
 • معلومات المستشفيات القريبة
 • نصائح طبية عامة
 
+📍 لمساعدة أفضل: شارك موقعك معي لأجد أقرب المستشفيات إليك
+
 أرسل لي أي سؤال طبي وسأساعدك! 🩺"""
                 
-                requests.post(TELEGRAM_URL, json={
+                # Add location request button
+                requests.post(f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage", json={
                     "chat_id": chat_id,
-                    "text": welcome_msg
+                    "text": welcome_msg,
+                    "reply_markup": {
+                        "keyboard": [
+                            [{"text": "📍 شارك موقعي", "request_location": True}],
+                            [{"text": "❓ مساعدة", "text": "/help"}]
+                        ],
+                        "resize_keyboard": True,
+                        "one_time_keyboard": False
+                    }
                 })
                 
             elif text.startswith('/help'):
@@ -59,6 +94,8 @@ def telegram_webhook():
 • "عندي صداع"
 • "كيف أعالج الحروق؟"
 • "أين أقرب مستشفى؟"
+
+📍 شارك موقعك معي لأجد أقرب المستشفيات إليك
 
 🆘 في حالات الطوارئ:
 اتصل بـ 999 فوراً
@@ -71,10 +108,33 @@ def telegram_webhook():
                     "text": help_msg
                 })
                 
+            elif text == "📍 شارك موقعي":
+                # User clicked location button but didn't actually share location
+                location_request_msg = """لمشاركة موقعك:
+
+1️⃣ اضغط على زر "📍 شارك موقعي" أدناه
+2️⃣ أو اضغط على زر 📎 (المرفقات) في تليجرام
+3️⃣ اختر "الموقع" 
+4️⃣ اختر "إرسال موقعي الحالي"
+
+بعد مشاركة الموقع، ستحصل على معلومات دقيقة عن أقرب المستشفيات! 🏥"""
+                
+                requests.post(f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage", json={
+                    "chat_id": chat_id,
+                    "text": location_request_msg,
+                    "reply_markup": {
+                        "keyboard": [
+                            [{"text": "📍 شارك موقعي", "request_location": True}]
+                        ],
+                        "resize_keyboard": True,
+                        "one_time_keyboard": True
+                    }
+                })
+                
             else:
                 # Process medical question
-                # No user coordinates for Telegram (they don't share location automatically)
-                response = ask_question(text, user_coords=None)
+                # TODO: In real implementation, you might want to store user locations in session/database
+                response = ask_question(text, user_coords=user_coords)
                 
                 # Split long messages (Telegram has 4096 character limit)
                 if len(response) > 4000:

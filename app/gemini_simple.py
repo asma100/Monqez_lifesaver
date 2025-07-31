@@ -53,10 +53,18 @@ def get_fallback_response(query, user_coords=None):
     """Provide basic first aid guidance when Gemini API is unavailable"""
     
     # Get hospital and volunteer info
-    hospitals = get_top_7_hospitals(user_coords) if user_coords else []
+    hospitals = get_top_7_hospitals(user_coords)
     volunteers = get_all_available_volunteers()
     
-    hospital_text = format_hospitals_for_prompt(hospitals) if hospitals else "لا تتوفر معلومات المستشفيات حالياً."
+    # Handle hospital info based on location availability
+    if hospitals:
+        hospital_text = format_hospitals_for_prompt(hospitals)
+    else:
+        if user_coords is None:
+            hospital_text = "لم تشارك موقعك، لذلك لا يمكنني تقديم معلومات عن المستشفيات القريبة.\nيرجى مشاركة موقعك للحصول على توصيات دقيقة للمستشفيات."
+        else:
+            hospital_text = "لا تتوفر معلومات المستشفيات حالياً."
+    
     volunteer_text = format_volunteers_for_prompt(volunteers) if volunteers else "لا يوجد أطباء متطوعون متاحون حالياً."
     
     # Basic keyword matching for common emergencies
@@ -92,7 +100,23 @@ def get_fallback_response(query, user_coords=None):
 # Simplified prompt without RAG/PDF reference
 def make_prompt(query, history, user_coords=None):
     top_hospitals = get_top_7_hospitals(user_coords)
-    hospital_info_text = format_hospitals_for_prompt(top_hospitals) if top_hospitals else "Location not available."
+    
+    # Handle hospital information based on location availability
+    if top_hospitals:
+        hospital_info_text = format_hospitals_for_prompt(top_hospitals)
+        location_text = f"User location is: {user_coords}"
+        hospital_instruction = ("From the list above, choose the most relevant hospital based on the emergency. "
+                               "If more than one hospital is suitable, pick the closest. Mention which one and explain why.")
+    else:
+        if user_coords is None:
+            hospital_info_text = "لم يشارك المستخدم موقعه، لذلك لا يمكنني تقديم معلومات محددة عن المستشفيات القريبة."
+            location_text = "User location: Not provided"
+            hospital_instruction = ("Since the user hasn't shared their location, provide general advice about seeking medical care at the nearest hospital or medical facility. "
+                                   "Encourage them to share their location for more specific hospital recommendations.")
+        else:
+            hospital_info_text = "لا تتوفر معلومات المستشفيات حالياً."
+            location_text = f"User location is: {user_coords}"
+            hospital_instruction = "Hospital information is currently unavailable. Advise the user to contact the nearest medical facility."
 
     # Volunteer doctor section
     volunteers = get_all_available_volunteers()
@@ -112,11 +136,10 @@ def make_prompt(query, history, user_coords=None):
         "If the question is unclear or not directly answerable, politely say that and recommend contacting a licensed healthcare provider. "
         "If the situation described seems life-threatening or urgent, remind the user to seek help from emergency services or a trained person nearby.\n\n"
 
-        f"User location is: {user_coords}\n"
-        f"Here are the 7 closest hospitals:\n{hospital_info_text}\n\n"
-        "From the list above, choose the most relevant hospital based on the emergency. "
-        "If more than one hospital is suitable, pick the closest. Mention which one and explain why.\n\n"
-        "if the user out of the country, tell them that you are not able to help them because they are not in Sudan and they should contact the nearest hospital.\n\n"
+        f"{location_text}\n"
+        f"Hospital information:\n{hospital_info_text}\n\n"
+        f"{hospital_instruction}\n\n"
+        "if the user out of the country, give them the necessary first aid but tell them that you are not able to help them with hospital information because they are not in Sudan and they should contact the nearest hospital.\n\n"
 
         f"Volunteer doctors currently available:\n{volunteers_info}\n"
         "From the list above, choose the most relevant volunteer doctor based on the emergency. "
