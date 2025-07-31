@@ -129,6 +129,11 @@ def chat():
     query = None
     answer = None
     user_coords = session.get('user_coords')
+    
+    # Start new conversation session when visiting chat page
+    if 'chat_session_id' not in session:
+        session['chat_session_id'] = str(uuid.uuid4())
+    
     print(user_coords)  # ← Get user location
 
     if request.method == 'POST':
@@ -138,11 +143,32 @@ def chat():
 
     return render_template('chatbot.html', query=query, answer=answer)
 
+@app.route('/new_chat')
+def new_chat():
+    """Start a new conversation session"""
+    session['chat_session_id'] = str(uuid.uuid4())
+    return redirect(url_for('chat'))
+
 @app.route('/history')
 @login_required
 def history():
-    chats = ChatHistory.query.filter_by(user_id=current_user.id).order_by(ChatHistory.timestamp.desc()).all()
-    return render_template("history.html", chats=chats)
+    # Group chats by session_id and order by timestamp
+    chats = ChatHistory.query.filter_by(user_id=current_user.id).order_by(ChatHistory.session_id, ChatHistory.timestamp).all()
+    
+    # Group conversations by session_id
+    conversations = {}
+    for chat in chats:
+        if hasattr(chat, 'session_id'):
+            if chat.session_id not in conversations:
+                conversations[chat.session_id] = []
+            conversations[chat.session_id].append(chat)
+        else:
+            # Handle old format (before session_id was added)
+            if 'legacy' not in conversations:
+                conversations['legacy'] = []
+            conversations['legacy'].append(chat)
+    
+    return render_template("history.html", conversations=conversations)
 
 
 @app.route('/delete_chat/<int:chat_id>', methods=['POST'])
@@ -164,6 +190,7 @@ def about():
 
 from app.models import ChatHistory  # make sure this is imported
 from datetime import datetime
+import uuid
 
 @app.route('/get_response', methods=['POST'])
 @login_required
@@ -171,16 +198,32 @@ def get_response():
     data = request.get_json()
     query = data.get('query')
     if query:
+        # Get or create session ID for this conversation
+        session_id = session.get('chat_session_id')
+        if not session_id:
+            session_id = str(uuid.uuid4())
+            session['chat_session_id'] = session_id
+        
         user_coords = session.get('user_coords')
         answer = ask_question(query, user_coords=user_coords)
 
-        chat_text = f"User: {query}\nBot: {answer}"
-        # Save to chat history
-        new_chat = ChatHistory(
-        user_id=current_user.id,
-        content=chat_text
+        # Save user message
+        user_chat = ChatHistory(
+            user_id=current_user.id,
+            session_id=session_id,
+            content=query,
+            message_type='user'
         )
-        db.session.add(new_chat)
+        db.session.add(user_chat)
+        
+        # Save bot response
+        bot_chat = ChatHistory(
+            user_id=current_user.id,
+            session_id=session_id,
+            content=answer,
+            message_type='bot'
+        )
+        db.session.add(bot_chat)
         db.session.commit()
 
         return jsonify({'response': answer})
