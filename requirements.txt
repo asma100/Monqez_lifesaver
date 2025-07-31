@@ -9,15 +9,15 @@ Flask-Migrate==4.1.0
 # Database Migration
 alembic==1.16.4
 
+# Database drivers
+psycopg2-binary==2.9.9
+
 # Forms and Validation
 WTForms==3.2.1
 email-validator==2.2.0
 
-# Google AI
+# Google AI (Only dependency for AI functionality)
 google-generativeai==0.8.5
-
-# PDF Processing
-pypdf==5.7.0
 
 # Location Services
 geopy==2.4.1

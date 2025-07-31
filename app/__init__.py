@@ -13,8 +13,14 @@ login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 login_manager.login_message_category = 'info'
 
-
-
 migrate = Migrate(app, db)
 
 from app import routes, models
+
+# Create tables automatically in production
+with app.app_context():
+    try:
+        db.create_all()
+        print("Database tables created successfully!")
+    except Exception as e:
+        print(f"Database initialization warning: {e}")
