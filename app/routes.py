@@ -3,7 +3,11 @@ from app import app, db, bcrypt
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
 from flask_login import login_user, current_user, logout_user, login_required
-from app.gemini import ask_question
+try:
+    from app.gemini import ask_question
+except ImportError:
+    # Fallback to lite version if heavy dependencies not available
+    from app.gemini_lite import ask_question
 from flask import session
 from flask import Flask
 import requests

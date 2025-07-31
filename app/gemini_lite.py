@@ -10,60 +10,8 @@ load_dotenv()
 # Configure Gemini API using environment variable
 genai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
 
-# Global variables for lazy loading
-_faiss_store = None
-_retriever = None
-
-def _initialize_embeddings():
-    """Lazy load embeddings and FAISS store only when needed"""
-    global _faiss_store, _retriever
-    
-    if _faiss_store is None:
-        try:
-            from langchain.text_splitter import RecursiveCharacterTextSplitter
-            from langchain_community.vectorstores import FAISS
-            from langchain_huggingface import HuggingFaceEmbeddings
-            from langchain_community.document_loaders import PyPDFLoader
-            
-            # Path to the PDF
-            pdf_path = os.path.join(os.path.dirname(__file__), "pdfs", "first_aid_notes_2019.pdf")
-            
-            # Load and split documents
-            loader = PyPDFLoader(pdf_path)
-            documents = loader.load()
-            
-            # Split the text into chunks
-            text_splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=50)
-            chunks = text_splitter.split_documents(documents)
-            
-            # Load the embedding model and embed the text chunks
-            huggingface_embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-            
-            # Create the FAISS index directly using the embeddings and text chunks
-            _faiss_store = FAISS.from_documents(chunks, huggingface_embeddings)
-            
-            # Set up a retriever
-            _retriever = _faiss_store.as_retriever(search_kwargs={"max_chunks": 5})
-            
-        except ImportError as e:
-            print(f"Warning: Could not load embeddings: {e}")
-            return None
-    
-    return _retriever
-
 # Conversation history to store previous exchanges
 conversation_history = []
-
-# Function to retrieve relevant text chunks
-def get_relevant_docs(query):
-    retriever = _initialize_embeddings()
-    if retriever is None:
-        # Fallback to basic response if embeddings not available
-        return ["Basic first aid information: Please seek immediate medical attention for emergencies."]
-    
-    docs = retriever.get_relevant_documents(query)
-    relevant_chunks = [doc.page_content for doc in docs]
-    return relevant_chunks
 
 def format_hospitals_for_prompt(hospitals):
     result = []
@@ -91,14 +39,12 @@ def format_volunteers_for_prompt(volunteers):
         )
     return "\n".join(formatted)
 
-
-# Function to create RAG prompt with conversation memory
-def make_rag_prompt(query, relevant_passage, history, top_hospitals=None, user_coords=None):
-    relevant_passage = ' '.join(relevant_passage)
+# Simplified RAG prompt without embeddings
+def make_rag_prompt(query, history, top_hospitals=None, user_coords=None):
     top_hospitals = get_top_7_hospitals(user_coords)
     hospital_info_text = format_hospitals_for_prompt(top_hospitals) if top_hospitals else "Location not available."
 
-    # 🆕 Volunteer doctor section
+    # Volunteer doctor section
     volunteers = get_all_available_volunteers()
     if volunteers:
         volunteers_info = format_volunteers_for_prompt(volunteers)
@@ -127,8 +73,7 @@ def make_rag_prompt(query, relevant_passage, history, top_hospitals=None, user_c
 
         f"Conversation History:\n{history_text}\n\n"
         "if there is conversation history, use it to understand the context of the user's question.  and continuing the conversation. form where you left it \n\n"
-        f"QUESTION: '{query}'\n"
-        f"REFERENCE PASSAGE: '{relevant_passage}'\n\n"
+        f"QUESTION: '{query}'\n\n"
 
         "After you answer the user's question, ask any important follow-up related questions that may help medical professionals later.  \n"
         "Politely and clearly ask the user to provide this information, as it may be critical for diagnosis and treatment when they reach the hospital.\n\n"
@@ -138,26 +83,19 @@ def make_rag_prompt(query, relevant_passage, history, top_hospitals=None, user_c
 
     return prompt
 
-
-
-   
-
 # Function to generate a response using Gemini
 def generate_response(user_prompt):
     model = genai.GenerativeModel('gemini-2.5-pro')
     answer = model.generate_content(user_prompt)
     return answer.text
 
-# Main function to ask a question and store the answer in history
+# Simplified main function without embeddings
 def ask_question(query, user_coords=None):
-    relevant_text = get_relevant_docs(query)
-
     # If we received user coordinates, find top hospitals
     top_hospitals = get_top_7_hospitals(user_coords) if user_coords else []
 
     prompt = make_rag_prompt(
         query,
-        relevant_passage=relevant_text,
         history=conversation_history,
         top_hospitals=top_hospitals,
         user_coords=user_coords
@@ -170,5 +108,3 @@ def ask_question(query, user_coords=None):
         conversation_history.pop(0)
 
     return answer
-
-

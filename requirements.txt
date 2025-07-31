@@ -16,24 +16,6 @@ email-validator==2.2.0
 # Google AI
 google-generativeai==0.8.5
 
-# LangChain for AI/ML Document Processing
-langchain==0.3.26
-langchain-community==0.3.27
-langchain-core==0.3.68
-langchain-huggingface==0.3.0
-langchain-text-splitters==0.3.8
-
-# Vector Database
-faiss-cpu==1.11.0
-
-# HuggingFace for Embeddings
-huggingface-hub==0.33.2
-sentence-transformers==5.0.0
-transformers==4.53.1
-tokenizers==0.21.2
-torch==2.5.0  
- 
-
 # PDF Processing
 pypdf==5.7.0
 
@@ -58,4 +40,5 @@ Jinja2==3.1.6
 MarkupSafe==3.0.2
 click==8.2.1
 itsdangerous==2.2.0
+blinker==1.9.0
 blinker==1.9.0
